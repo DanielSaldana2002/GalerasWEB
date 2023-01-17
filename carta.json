@@ -44,6 +44,11 @@
       "id": 9,
       "nombre": "Ostion de Rokefeller",
       "Categoria": "Ostras y Almejas"
+    },
+    {
+      "id": 10,
+      "nombre": "Pata de mula",
+      "Categoria": "Ostras y Almejas"
     }
   ],
   "Categoria": [
