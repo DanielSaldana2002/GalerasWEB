@@ -1,32 +1,59 @@
 {
-    "carta":[
-        {
-            "id": 1,
-            "nombre": "Camaron",
-            "Categoria": "Cocteles"
-        },
-
-        {
-            "id": 2,
-            "nombre": "Pulpo",
-            "Categoria": "Cocteles"
-        },
-        
-        {
-            "id":3,
-            "nombre":"Campechano",
-            "Categoria":"Cocteles"
-        },
-        {
-            "id":4,
-            "nombre":"Coctel",
-            "Categoria":"Cocteles"
-        }
-    ],
-        "Categoria": [
-            {
-                "nombre": "Cocteles",
-                "id": 1
-            }
-        ]
+  "carta": [
+    {
+      "id": 1,
+      "nombre": "Camaron",
+      "Categoria": "Cocteles"
+    },
+    {
+      "id": 2,
+      "nombre": "Pulpo",
+      "Categoria": "Cocteles"
+    },
+    {
+      "id": 3,
+      "nombre": "Campechano",
+      "Categoria": "Cocteles"
+    },
+    {
+      "id": 4,
+      "nombre": "Coctel",
+      "Categoria": "Cocteles"
+    },
+    {
+      "id": 5,
+      "nombre": "Vuelve a la vida",
+      "Categoria": "Cocteles"
+    },
+    {
+      "id": 6,
+      "nombre": "Camaron y Pulpo",
+      "Categoria": "Cocteles"
+    },
+    {
+      "id": 7,
+      "nombre": "Ostion de placer",
+      "Categoria": "Ostras y Almejas"
+    },
+    {
+      "id": 8,
+      "nombre": "Ostion de nayarit",
+      "Categoria": "Ostras y Almejas"
+    },
+    {
+      "id": 9,
+      "nombre": "Ostion de Rokefeller",
+      "Categoria": "Ostras y Almejas"
+    }
+  ],
+  "Categoria": [
+    {
+      "nombre": "Cocteles",
+      "id": 1
+    },
+    {
+      "nombre": "Ostras y Almejas",
+      "id": 2
+    }
+  ]
 }

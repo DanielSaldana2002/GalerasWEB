@@ -42,6 +42,9 @@ function apiCarta(){
       document.getElementById('apiProductos').innerHTML = productos;
   }
 
+  function addProductos(){
+    
+  }
 
 }
 
