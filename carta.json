@@ -1,0 +1,32 @@
+{
+    "carta":[
+        {
+            "id": 1,
+            "nombre": "Camaron",
+            "Categoria": "Cocteles"
+        },
+
+        {
+            "id": 2,
+            "nombre": "Pulpo",
+            "Categoria": "Cocteles"
+        },
+        
+        {
+            "id":3,
+            "nombre":"Campechano",
+            "Categoria":"Cocteles"
+        },
+        {
+            "id":4,
+            "nombre":"Coctel",
+            "Categoria":"Cocteles"
+        }
+    ],
+        "Categoria": [
+            {
+                "nombre": "Cocteles",
+                "id": 1
+            }
+        ]
+}

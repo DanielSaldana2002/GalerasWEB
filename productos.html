@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="StyleSheet" href="style.css" type="text/css">
+    <div id="menu">
+        <ul id="menu">
+            <li><a href="index.html" id="title">Galeras</a></li>
+            <li><a onmouseenter="animationEnterComparativa('titleAnimation', 'infoAnimation', 'Comparativa', 'En esta interfaz tienes que seleccionar primero la categoría ya que únicamente se puede comparar con categorías iguales,\ndespués seleccionas el producto 1 y 2, en automático la interfaz te muestra datos como el precio, la cantidad de veces utilizada y \nabajo te mostrara en las tablas en que tickets utilizaron y la fecha.')" onmouseout="animationOutComparativa('titleAnimation', 'infoAnimation')">Comparativa</a></li>
+            <li><a>Productos</a></li>
+            <li><a onmouseenter="animationEnterComparativa('titleAnimation', 'infoAnimation', 'Reporte', 'Primero tienes que seleccionar el filtro de fecha, después seleccionas la fecha a generar y presionas el botón Enviar, en automático el sistema te mostrara en la tabla toda la información del ticket con respectivo como lo hayas filtrado. En la parte inferior veras tablas donde se mostrará información de los mayores productos vendidos, los meseros con mas tickets y las mesas con más tickets.')" onmouseout="animationOutComparativa('titleAnimation', 'infoAnimation')">Reporte</a></li>
+            <li><a onmouseenter="animationEnterComparativa('titleAnimation', 'infoAnimation', 'Meseros', 'En registro de meseros tendremos que ingresar el nombre, después introducir el apellido paterno y apellido materno, se genera un id. Después tendremos que apretar el botón registrar, cuando hayas apretado el botón se actualizara la tabla de la izquierda con todos los registros de los meseros. Con el botón eliminar podrás deshacer un mesero registrado.')" onmouseout="animationOutComparativa('titleAnimation', 'infoAnimation')">Meseros</a></li>
+        </ul>
+    </div>
+    <div id="information">
+        <h2 id="titleAnimation"></h2>
+        <p id="infoAnimation"></p>
+    </div>
+    <div>
+        
+        <Table>
+            
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Categoria</th>
+                </tr>
+                <tbody id="apiProductos"></tbody>
+        </Table>
+        <div id="categoria_api">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dignissimos esse reiciendis, sed ut maiores consequatur beatae similique quis, sunt, perspiciatis itaque minima eaque suscipit. Possimus saepe eius adipisci iure ab, ex velit quasi accusamus soluta autem quod. Sit numquam similique laboriosam aut sint eligendi natus consectetur consequatur suscipit, vel facilis saepe totam exercitationem veniam dolore. Harum tenetur ea eligendi dolorem ratione voluptatem accusantium non cupiditate porro vitae rerum maxime ad facere sapiente nisi delectus reiciendis, perspiciatis blanditiis enim dolorum praesentium! Culpa laudantium quod eaque, sint illo provident, esse molestiae totam dolor placeat, similique ab exercitationem rem laborum quaerat debitis sunt vitae quasi eos eveniet dolore voluptatibus! Architecto, quae accusamus debitis deleniti explicabo earum atque tenetur consequatur perferendis aspernatur iste deserunt veniam, labore consequuntur. Eaque fugiat adipisci necessitatibus culpa maxime amet eum explicabo dolorum aut non sapiente quia fugit quae quasi minima, dignissimos magni voluptatem? Sint commodi iusto asperiores? Amet tenetur accusantium consequatur sequi minus odit commodi facilis tempore autem dolore. Atque sunt nostrum, ipsa nihil rerum excepturi nemo voluptatibus, modi dolorum veniam maxime quos, suscipit nesciunt! Asperiores temporibus nam numquam consequuntur ipsum? Ad, magnam eveniet aliquid enim laudantium sequi quo fuga culpa consequuntur reiciendis doloremque obcaecati nesciunt hic commodi dolor repellat est ratione beatae sunt dolore ex aspernatur non. Ea dolor debitis deserunt, veniam nam nulla optio fugiat tenetur! Fugiat magnam ex quidem quis tempore, autem ad unde iusto quo asperiores facere pariatur officia. In praesentium quia esse labore, modi, dolor voluptate fugit, facilis enim tempora perferendis dolorum eveniet beatae quibusdam? Quae accusamus ipsa perspiciatis voluptatem incidunt necessitatibus in dolore fugit sunt provident, maiores velit ab. Aliquid earum quia incidunt veniam, animi deserunt consequatur commodi cumque placeat odit accusamus debitis mollitia nisi molestias omnis suscipit numquam consectetur repudiandae quae quam accusantium dignissimos illum? Molestias voluptatem hic impedit consequatur vitae!</p>
+        </div>
+    </div>
+</body>
+        <script src="main.js"></script>
+</html>
