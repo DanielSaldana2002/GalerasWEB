@@ -9,7 +9,6 @@ function animationEnterComparativa(idTitle, idInfo, titles, info){
         title.style.marginBottom = '30px';
         informations.style.transition = '1000ms';
         informations.style.backgroundColor = 'yellow';
-        
 }
 
 function animationOutComparativa(idTitle, idInfo){
@@ -37,15 +36,10 @@ function apiCarta(){
       console.log(data);
       let productos = '';
       for(let i = 0; i<data.length; i++){
-        productos += '<tr><td>'+data[i].id+'</td>'+'<td>'+data[i].nombre+'</td>'+'<td>'+data[i].Categoria+'</td></tr>';
+        productos += '<tr>'+'<td>'+data[i].nombre+'</td>'+'<td>'+data[i].Categoria+'</td></tr>';
       }
       document.getElementById('apiProductos').innerHTML = productos;
   }
-
-  function addProductos(){
-    
-  }
-
 }
 
 setInterval(() => {

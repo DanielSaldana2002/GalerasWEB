@@ -49,6 +49,26 @@
       "id": 10,
       "nombre": "Pata de mula",
       "Categoria": "Ostras y Almejas"
+    },
+    {
+      "id": 11,
+      "nombre": "Tostada tropical",
+      "Categoria": "Entradas"
+    },
+    {
+      "id": 12,
+      "nombre": "Cerveza corona",
+      "Categoria": "Bebidas alcoholicas"
+    },
+    {
+      "id": 13,
+      "nombre": "Cerveza Tecate",
+      "Categoria": "Bebidas alcoholicas"
+    },
+    {
+      "id": 14,
+      "nombre": "Cerveza Modelo",
+      "Categoria": "Bebidas alcoholicas"
     }
   ],
   "Categoria": [
@@ -59,6 +79,18 @@
     {
       "nombre": "Ostras y Almejas",
       "id": 2
+    },
+    {
+      "nombre": "Entradas",
+      "id": 3
+    },
+    {
+      "nombre": "Bebidas",
+      "id": 4
+    },
+    {
+      "nombre": "Bebidas alcoholicas",
+      "id": 5
     }
   ]
 }
