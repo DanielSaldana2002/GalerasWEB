@@ -64,11 +64,6 @@
       "id": 13,
       "nombre": "Cerveza Tecate",
       "Categoria": "Bebidas alcoholicas"
-    },
-    {
-      "id": 14,
-      "nombre": "Cerveza Modelo",
-      "Categoria": "Bebidas alcoholicas"
     }
   ],
   "Categoria": [
