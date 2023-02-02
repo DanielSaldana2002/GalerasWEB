@@ -4,7 +4,7 @@ function animationEnterComparativa(idTitle, idInfo, titles, info){
         var title = document.getElementById(idTitle);
         var info =  document.getElementById(idInfo);
         var informations = document.getElementById('information');
-        title.style.transition = '800ms';
+        title.style.transition = '500ms';
         title.style.textAlign = 'center';
         title.style.marginBottom = '30px';
         informations.style.transition = '1000ms';
