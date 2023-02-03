@@ -11,3 +11,4 @@ request(options, function (error, response) {
   console.log(carta);
 
 });
+console.log('puto el dany');
