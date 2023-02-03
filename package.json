@@ -1,0 +1,31 @@
+{
+  "name": "galerasweb",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mssql": "^9.1.1",
+    "node": "^19.6.0",
+    "node-bin-setup": "^1.1.3",
+    "request": "^2.88.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielSaldana2002/GalerasWEB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielSaldana2002/GalerasWEB/issues"
+  },
+  "homepage": "https://github.com/DanielSaldana2002/GalerasWEB#readme"
+}

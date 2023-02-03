@@ -1,0 +1,22 @@
+{
+  "metodo": [
+    {
+      "id": "GET",
+      "activador": false
+    },
+    {
+      "id": "POST",
+      "activador": false
+    },
+    {
+      "id": "DELETE",
+      "activador": false
+    },
+    {
+      "id": "PATCH",
+      "activador": false
+    }
+  ],
+  "empleados": [
+  ]
+}
