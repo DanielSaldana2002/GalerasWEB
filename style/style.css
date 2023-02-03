@@ -1,8 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 15px;
+    position: absolute;
+    background-color: aqua;
+}
 #menu {
-    margin:-13px;
-    padding: 15px 40px 25px 10px;
+    padding: 0;
+    margin: 0;
     list-style-type:none;
-    background-color: yellow;
+    list-style-position:outside;
+    background-color: gray;
 }
 
 #title{
@@ -27,7 +36,7 @@ a{
     text-decoration:none;
     text-align:center;
     color:black;
-    background-color: yellow;
+    background-color: gray;
     padding:15px 60px;
     border-right:1px solid black;
     display:ruby-base; 
@@ -42,99 +51,4 @@ a{
     transition: 60ms;
     font-size: 35px;
     margin-bottom: 6px;
-}
-
-#information{
-    margin-top: 60px;
-}
-
-#information h2{
-    text-align: left;
-    font-size: 50px;
-
-}
-
-#information p{
-    margin-left: 30px;
-    margin-right: 30px;
-    text-align:unset;
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-#mesas{
-list-style-type: none;
-background-color: yellow;
-margin-right: 270px;
-}
-
-#mesas li{
-    float: left;
-}
-
-#mesas h4{
-    text-decoration: none;
-    margin-left: 9px;
-    margin-right: 20px;
-    font-size: 30px;
-    margin-top: -5px;
-    margin-bottom: 45px;
-}
-
-#cuadro{
-    background-color: yellow;
-    margin-left: 800px;
-    margin-top: 25px;
-}
-
-#agregarPedido{
-    margin-left: 85px;
-    font-size: 18px;
-    font-weight: bolder;
-    padding-bottom: 5px;
-}
-#modificarPedido{
-    margin-left: 10px;
-    font-size: 18px;
-    font-weight: bolder;
-    padding-bottom: 5px;
-}
-#eliminarPedido{
-    margin-left: 10px;
-    font-size: 18px;
-    font-weight: bolder;
-    padding-bottom: 5px;
-}
-
-.hours{
-    margin-left: 20px;
-    margin-top: 0px;
-}
-
-table{
-    border-collapse: collapse;
-    margin-left: 30px;
-}
-
-th,tr, td{
-    border: 1px solid black;
-    padding: 20px;
-    text-align: center;
-    padding-bottom: 0px;
-    font-size: 25px;
-    margin-left:initial;
-}
-th{
-    background-color: yellow;
-    text-align: left;
-}
-td{
-    text-align: left;
-}
-
-#categoria_api{
-   margin-left: 770px;
-   margin-bottom: 200px;
-   background-color: yellow;
 }
