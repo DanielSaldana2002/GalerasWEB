@@ -4,14 +4,13 @@ body{
     left: 0;
     top: 15px;
     position: absolute;
-    background-color: aqua;
+
 }
 #menu {
     padding: 0;
     margin: 0;
     list-style-type:none;
     list-style-position:outside;
-    background-color: gray;
 }
 
 #title{
@@ -36,9 +35,10 @@ a{
     text-decoration:none;
     text-align:center;
     color:black;
-    background-color: gray;
+    background-color: rgb(231, 231, 123);
     padding:15px 60px;
     border-right:1px solid black;
+    border-left:1px solid black;
     display:ruby-base; 
     margin-top: -12px;
 }
