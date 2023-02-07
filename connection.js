@@ -1,13 +1,6 @@
-import { Console } from 'console';
-import sql from 'mssql'
+var sql = require('mssql');
+var request = require('request');
 var val;
-
-setInterval(() => {
-    metodoAPIGet();
-    consultaMostrarTodosLosEmpleados(val);
-    metodoAPIDelete2();
-}, 1000);
-
 const dbSettings = {
     user: 'daniel2002',
     password: '12345678',
@@ -19,92 +12,73 @@ const dbSettings = {
     },
 };
 
-function metodoAPIGet(){
-    var empleado;
-    var requestOptions = {
-        method: 'GET',
-        redirect: 'follow'
-      };
-      
-      fetch("http://localhost:3000/metodo/GET", requestOptions,)
-        .then(response => response.text())
-        .then(result => mostrarDatos(result))
-        .catch(error => console.log('error', error));
-    const mostrarDatos = (data) => {
-        empleado = JSON.parse(data);
-        val = empleado.activador;
-    }
+borrarDatosDeLaAPI();
+consultaMostrarTodo(true);
+setInterval(() => {
+    var e;
+}, 3000);
+
+function borrarDatosDeLaAPI(){
+    request = require('request');
+    var options = {
+        'method': 'DELETE',
+        'url': 'http://localhost:3000/BaseDeDatos/1',
+        'headers': {
+        }
+    };
+    request(options, function (error, response) {
+    if (error) throw new Error(error);
+    });
+
+    request = require('request');
+    var options = {
+        'method': 'DELETE',
+        'url': 'http://localhost:3000/BaseDeDatos/1',
+        'headers': {
+        }
+    };
+    request(options, function (error, response) {
+    if (error) throw new Error(error);
+    });
+
+    request = require('request');
+    var options = {
+        'method': 'DELETE',
+        'url': 'http://localhost:3000/BaseDeDatos/1',
+        'headers': {
+        }
+    };
+    request(options, function (error, response) {
+    if (error) throw new Error(error);
+    });
 }
 
-function metodoAPIDelete2(){
-    var requestOptions = {
-        method: 'DELETE',
-        redirect: 'follow'
-      };
-      
-      fetch("http://localhost:3000/empleados/2", requestOptions)
-        .then(response => response.text())
-        .then(result => result)
-        .catch(error => console.log('error', error));
-}
-
-function metodoAPIDelete1(validador){
-    if(validador==true){
-        var requestOptions = {
-            method: 'DELETE',
-            redirect: 'follow'
-          };
-          
-          fetch("http://localhost:3000/empleados/1", requestOptions)
-            .then(response => response.text())
-            .then(result => result)
-            .catch(error => console.log('error', error));
-    }
-}
-
-async function consultaMostrarTodosLosEmpleados(validador){
-    metodoAPIDelete1(val);
-    if(validador == true){
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-
-        var raw = JSON.stringify({
-            "activador": false
-        });
-
-        var requestOptions = {
-            method: 'PATCH',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
-        };
-
-        fetch("http://localhost:3000/metodo/GET", requestOptions,)
-        .then(response => response.text())
-        .then(result => console.log())
-        .catch(error => console.log('error', error));
+async function consultaMostrarTodo(validador){
+   if(validador == true){
         const pool = await sql.connect(dbSettings);
-        const result = await pool
-        .request()
-        .query("SELECT Employees.EmployeeID, Employees.FirstName, Employees.LastName FROM dbo.Employees;");
+        const result = await pool.request().query("SELECT Products.ProductID, Products.ProductName, Categories.CategoryName FROM dbo.Products, dbo.Categories where Products.CategoryID = Categories.CategoryID;");
         console.log(result.recordsets[0]);
-        var listaEmpleados = result.recordsets[0];
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-        var raw = JSON.stringify({
-            listaEmpleados
-        });
+        var listaProductos = result.recordsets[0];
+        const pool2 = await sql.connect(dbSettings);
+        const result2 = await pool2.request().query("SELECT Categories.CategoryID, Categories.CategoryName, Categories.Description FROM dbo.Categories;");
+        console.log(result2.recordsets[0]);
+        var listaCategorias = result2.recordsets[0];
+        const pool3 = await sql.connect(dbSettings);
+        const result3 = await pool3.request().query("SELECT Employees.EmployeeID, Employees.FirstName, Employees.LastName FROM dbo.Employees;");
+        console.log(result3.recordsets[0]);
+        var listaEmpleados = result3.recordsets[0];
 
-        var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
+        request = require('request');
+        var options = {
+            'method': 'POST',
+            'url': 'http://localhost:3000/BaseDeDatos',
+            'headers': {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({listaEmpleados,listaCategorias,listaProductos})
         };
-
-        fetch("http://localhost:3000/empleados", requestOptions)
-        .then(response => response.text())
-        .then(result => console.log())
-        .catch(error => console.log('error', error));
-    }
+        request(options, function (error, response) {
+        if (error) throw new Error(error);
+        });
+   }
 }

@@ -1,22 +1,483 @@
 {
-  "metodo": [
+  "BaseDeDatos": [
     {
-      "id": "GET",
-      "activador": false
-    },
-    {
-      "id": "POST",
-      "activador": false
-    },
-    {
-      "id": "DELETE",
-      "activador": false
-    },
-    {
-      "id": "PATCH",
-      "activador": false
+      "listaEmpleados": [
+        {
+          "EmployeeID": 1,
+          "FirstName": "Nancy",
+          "LastName": "Davolio"
+        },
+        {
+          "EmployeeID": 2,
+          "FirstName": "Andrew",
+          "LastName": "Fuller"
+        },
+        {
+          "EmployeeID": 3,
+          "FirstName": "Janet",
+          "LastName": "Leverling"
+        },
+        {
+          "EmployeeID": 4,
+          "FirstName": "Margaret",
+          "LastName": "Peacock"
+        },
+        {
+          "EmployeeID": 5,
+          "FirstName": "Steven",
+          "LastName": "Buchanan"
+        },
+        {
+          "EmployeeID": 6,
+          "FirstName": "Michael",
+          "LastName": "Suyama"
+        },
+        {
+          "EmployeeID": 7,
+          "FirstName": "Robert",
+          "LastName": "King"
+        },
+        {
+          "EmployeeID": 8,
+          "FirstName": "Laura",
+          "LastName": "Callahan"
+        },
+        {
+          "EmployeeID": 9,
+          "FirstName": "Anne",
+          "LastName": "Dodsworth"
+        }
+      ],
+      "listaCategorias": [
+        {
+          "CategoryID": 1,
+          "CategoryName": "Beverages",
+          "Description": "Soft drinks, coffees, teas, beers, and ales"
+        },
+        {
+          "CategoryID": 2,
+          "CategoryName": "Condiments",
+          "Description": "Sweet and savory sauces, relishes, spreads, and seasonings"
+        },
+        {
+          "CategoryID": 3,
+          "CategoryName": "Confections",
+          "Description": "Desserts, candies, and sweet breads"
+        },
+        {
+          "CategoryID": 4,
+          "CategoryName": "Dairy Products",
+          "Description": "Cheeses"
+        },
+        {
+          "CategoryID": 5,
+          "CategoryName": "Grains/Cereals",
+          "Description": "Breads, crackers, pasta, and cereal"
+        },
+        {
+          "CategoryID": 6,
+          "CategoryName": "Meat/Poultry",
+          "Description": "Prepared meats"
+        },
+        {
+          "CategoryID": 7,
+          "CategoryName": "Produce",
+          "Description": "Dried fruit and bean curd"
+        },
+        {
+          "CategoryID": 8,
+          "CategoryName": "Seafood",
+          "Description": "Seaweed and fish"
+        }
+      ],
+      "listaProductos": [
+        {
+          "ProductID": 1,
+          "ProductName": "Chai",
+          "CategoryName": "Beverages"
+        },
+        {
+          "ProductID": 2,
+          "ProductName": "Chang",
+          "CategoryName": "Beverages"
+        },
+        {
+          "ProductID": 3,
+          "ProductName": "Aniseed Syrup",
+          "CategoryName": "Condiments"
+        },
+        {
+          "ProductID": 4,
+          "ProductName": "Chef Anton's Cajun Seasoning",
+          "CategoryName": "Condiments"
+        },
+        {
+          "ProductID": 5,
+          "ProductName": "Chef Anton's Gumbo Mix",
+          "CategoryName": "Condiments"
+        },
+        {
+          "ProductID": 6,
+          "ProductName": "Grandma's Boysenberry Spread",
+          "CategoryName": "Condiments"
+        },
+        {
+          "ProductID": 7,
+          "ProductName": "Uncle Bob's Organic Dried Pears",
+          "CategoryName": "Produce"
+        },
+        {
+          "ProductID": 8,
+          "ProductName": "Northwoods Cranberry Sauce",
+          "CategoryName": "Condiments"
+        },
+        {
+          "ProductID": 9,
+          "ProductName": "Mishi Kobe Niku",
+          "CategoryName": "Meat/Poultry"
+        },
+        {
+          "ProductID": 10,
+          "ProductName": "Ikura",
+          "CategoryName": "Seafood"
+        },
+        {
+          "ProductID": 11,
+          "ProductName": "Queso Cabrales",
+          "CategoryName": "Dairy Products"
+        },
+        {
+          "ProductID": 12,
+          "ProductName": "Queso Manchego La Pastora",
+          "CategoryName": "Dairy Products"
+        },
+        {
+          "ProductID": 13,
+          "ProductName": "Konbu",
+          "CategoryName": "Seafood"
+        },
+        {
+          "ProductID": 14,
+          "ProductName": "Tofu",
+          "CategoryName": "Produce"
+        },
+        {
+          "ProductID": 15,
+          "ProductName": "Genen Shouyu",
+          "CategoryName": "Condiments"
+        },
+        {
+          "ProductID": 16,
+          "ProductName": "Pavlova",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 17,
+          "ProductName": "Alice Mutton",
+          "CategoryName": "Meat/Poultry"
+        },
+        {
+          "ProductID": 18,
+          "ProductName": "Carnarvon Tigers",
+          "CategoryName": "Seafood"
+        },
+        {
+          "ProductID": 19,
+          "ProductName": "Teatime Chocolate Biscuits",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 20,
+          "ProductName": "Sir Rodney's Marmalade",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 21,
+          "ProductName": "Sir Rodney's Scones",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 22,
+          "ProductName": "Gustaf's Knäckebröd",
+          "CategoryName": "Grains/Cereals"
+        },
+        {
+          "ProductID": 23,
+          "ProductName": "Tunnbröd",
+          "CategoryName": "Grains/Cereals"
+        },
+        {
+          "ProductID": 24,
+          "ProductName": "Guaraná Fantástica",
+          "CategoryName": "Beverages"
+        },
+        {
+          "ProductID": 25,
+          "ProductName": "NuNuCa Nuß-Nougat-Creme",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 26,
+          "ProductName": "Gumbär Gummibärchen",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 27,
+          "ProductName": "Schoggi Schokolade",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 28,
+          "ProductName": "Rössle Sauerkraut",
+          "CategoryName": "Produce"
+        },
+        {
+          "ProductID": 29,
+          "ProductName": "Thüringer Rostbratwurst",
+          "CategoryName": "Meat/Poultry"
+        },
+        {
+          "ProductID": 30,
+          "ProductName": "Nord-Ost Matjeshering",
+          "CategoryName": "Seafood"
+        },
+        {
+          "ProductID": 31,
+          "ProductName": "Gorgonzola Telino",
+          "CategoryName": "Dairy Products"
+        },
+        {
+          "ProductID": 32,
+          "ProductName": "Mascarpone Fabioli",
+          "CategoryName": "Dairy Products"
+        },
+        {
+          "ProductID": 33,
+          "ProductName": "Geitost",
+          "CategoryName": "Dairy Products"
+        },
+        {
+          "ProductID": 34,
+          "ProductName": "Sasquatch Ale",
+          "CategoryName": "Beverages"
+        },
+        {
+          "ProductID": 35,
+          "ProductName": "Steeleye Stout",
+          "CategoryName": "Beverages"
+        },
+        {
+          "ProductID": 36,
+          "ProductName": "Inlagd Sill",
+          "CategoryName": "Seafood"
+        },
+        {
+          "ProductID": 37,
+          "ProductName": "Gravad lax",
+          "CategoryName": "Seafood"
+        },
+        {
+          "ProductID": 38,
+          "ProductName": "Côte de Blaye",
+          "CategoryName": "Beverages"
+        },
+        {
+          "ProductID": 39,
+          "ProductName": "Chartreuse verte",
+          "CategoryName": "Beverages"
+        },
+        {
+          "ProductID": 40,
+          "ProductName": "Boston Crab Meat",
+          "CategoryName": "Seafood"
+        },
+        {
+          "ProductID": 41,
+          "ProductName": "Jack's New England Clam Chowder",
+          "CategoryName": "Seafood"
+        },
+        {
+          "ProductID": 42,
+          "ProductName": "Singaporean Hokkien Fried Mee",
+          "CategoryName": "Grains/Cereals"
+        },
+        {
+          "ProductID": 43,
+          "ProductName": "Ipoh Coffee",
+          "CategoryName": "Beverages"
+        },
+        {
+          "ProductID": 44,
+          "ProductName": "Gula Malacca",
+          "CategoryName": "Condiments"
+        },
+        {
+          "ProductID": 45,
+          "ProductName": "Rogede sild",
+          "CategoryName": "Seafood"
+        },
+        {
+          "ProductID": 46,
+          "ProductName": "Spegesild",
+          "CategoryName": "Seafood"
+        },
+        {
+          "ProductID": 47,
+          "ProductName": "Zaanse koeken",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 48,
+          "ProductName": "Chocolade",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 49,
+          "ProductName": "Maxilaku",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 50,
+          "ProductName": "Valkoinen suklaa",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 51,
+          "ProductName": "Manjimup Dried Apples",
+          "CategoryName": "Produce"
+        },
+        {
+          "ProductID": 52,
+          "ProductName": "Filo Mix",
+          "CategoryName": "Grains/Cereals"
+        },
+        {
+          "ProductID": 53,
+          "ProductName": "Perth Pasties",
+          "CategoryName": "Meat/Poultry"
+        },
+        {
+          "ProductID": 54,
+          "ProductName": "Tourtière",
+          "CategoryName": "Meat/Poultry"
+        },
+        {
+          "ProductID": 55,
+          "ProductName": "Pâté chinois",
+          "CategoryName": "Meat/Poultry"
+        },
+        {
+          "ProductID": 56,
+          "ProductName": "Gnocchi di nonna Alice",
+          "CategoryName": "Grains/Cereals"
+        },
+        {
+          "ProductID": 57,
+          "ProductName": "Ravioli Angelo",
+          "CategoryName": "Grains/Cereals"
+        },
+        {
+          "ProductID": 58,
+          "ProductName": "Escargots de Bourgogne",
+          "CategoryName": "Seafood"
+        },
+        {
+          "ProductID": 59,
+          "ProductName": "Raclette Courdavault",
+          "CategoryName": "Dairy Products"
+        },
+        {
+          "ProductID": 60,
+          "ProductName": "Camembert Pierrot",
+          "CategoryName": "Dairy Products"
+        },
+        {
+          "ProductID": 61,
+          "ProductName": "Sirop d'érable",
+          "CategoryName": "Condiments"
+        },
+        {
+          "ProductID": 62,
+          "ProductName": "Tarte au sucre",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 63,
+          "ProductName": "Vegie-spread",
+          "CategoryName": "Condiments"
+        },
+        {
+          "ProductID": 64,
+          "ProductName": "Wimmers gute Semmelknödel",
+          "CategoryName": "Grains/Cereals"
+        },
+        {
+          "ProductID": 65,
+          "ProductName": "Louisiana Fiery Hot Pepper Sauce",
+          "CategoryName": "Condiments"
+        },
+        {
+          "ProductID": 66,
+          "ProductName": "Louisiana Hot Spiced Okra",
+          "CategoryName": "Condiments"
+        },
+        {
+          "ProductID": 67,
+          "ProductName": "Laughing Lumberjack Lager",
+          "CategoryName": "Beverages"
+        },
+        {
+          "ProductID": 68,
+          "ProductName": "Scottish Longbreads",
+          "CategoryName": "Confections"
+        },
+        {
+          "ProductID": 69,
+          "ProductName": "Gudbrandsdalsost",
+          "CategoryName": "Dairy Products"
+        },
+        {
+          "ProductID": 70,
+          "ProductName": "Outback Lager",
+          "CategoryName": "Beverages"
+        },
+        {
+          "ProductID": 71,
+          "ProductName": "Flotemysost",
+          "CategoryName": "Dairy Products"
+        },
+        {
+          "ProductID": 72,
+          "ProductName": "Mozzarella di Giovanni",
+          "CategoryName": "Dairy Products"
+        },
+        {
+          "ProductID": 73,
+          "ProductName": "Röd Kaviar",
+          "CategoryName": "Seafood"
+        },
+        {
+          "ProductID": 74,
+          "ProductName": "Longlife Tofu",
+          "CategoryName": "Produce"
+        },
+        {
+          "ProductID": 75,
+          "ProductName": "Rhönbräu Klosterbier",
+          "CategoryName": "Beverages"
+        },
+        {
+          "ProductID": 76,
+          "ProductName": "Lakkalikööri",
+          "CategoryName": "Beverages"
+        },
+        {
+          "ProductID": 77,
+          "ProductName": "Original Frankfurter grüne Soße",
+          "CategoryName": "Condiments"
+        }
+      ],
+      "id": 1
     }
-  ],
-  "empleados": [
   ]
 }
