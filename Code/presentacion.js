@@ -4,7 +4,7 @@ setTimeout(() => {
     imgGalera.width = '0';
     imgFinal.opacity = '100%';
     imgFinal.transition = '1000ms';
-    imgFinal.marginLeft = '88%';
+    imgFinal.marginLeft = '90%';
     imgFinal.width = '8%';
 
 

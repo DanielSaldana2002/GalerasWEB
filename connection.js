@@ -1,11 +1,12 @@
+require('dotenv').config();
 var sql = require('mssql');
 var request = require('request');
 var val;
 const dbSettings = {
-    user: 'daniel2002',
-    password: '12345678',
-    server: 'DESKTOP-DANIEL',
-    database: 'Northwind',
+    user: process.env.user,
+    password: process.env.password,
+    server: process.env.server,
+    database: process.env.database,
     options: {
         encrypt: true,
         trustServerCertificate: true,
