@@ -1,0 +1,3 @@
+style
+para la hola de estilos "mober acer grande chica la pagina"
+ padi espara lo que esta adentro de cuadro.
