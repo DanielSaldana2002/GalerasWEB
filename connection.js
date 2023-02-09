@@ -2,16 +2,8 @@ require('dotenv').config();
 var sql = require('mssql');
 var request = require('request');
 var val;
-const dbSettings = {
-    user: process.env.user,
-    password: process.env.password,
-    server: process.env.server,
-    database: process.env.database,
-    options: {
-        encrypt: true,
-        trustServerCertificate: true,
-    },
-};
+let dbSettings = {};
+db(2);
 
 borrarDatosDeLaAPI();
 consultaMostrarTodo(true);
@@ -82,4 +74,30 @@ async function consultaMostrarTodo(validador){
         if (error) throw new Error(error);
         });
    }
+}
+
+function db(numero){
+    if(numero==1){
+        dbSettings = {
+            user: process.env.user,
+            password: process.env.password,
+            server: process.env.server,
+            database: process.env.database,
+            options: {
+                encrypt: true,
+                trustServerCertificate: true,
+            },
+        };
+    }else if(numero==2){
+        dbSettings = {
+            user: process.env.user2,
+            password: process.env.password2,
+            server: process.env.server2,
+            database: process.env.database2,
+            options: {
+                encrypt: true,
+                trustServerCertificate: true,
+            },
+        };
+    }
 }
