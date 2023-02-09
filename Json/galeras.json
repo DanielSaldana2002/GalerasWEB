@@ -1,0 +1,27 @@
+{
+    "baseDeDatos":[
+        {
+            "eventos":[
+                {
+                    "id-evento":1,
+                    "nombre-evento":"nombre",
+                    "descripcion-evento":"descripcion",
+                    "fecha-evento": "dia-mes-año"
+                }
+            ],
+            "comentarios":[
+                {
+                    "id-comentario":1,
+                    "descripcion-comentario":"comentario",
+                    "puntuacion-comentario":5
+                }
+            ],
+            "almacen":[],
+            "reporte":[],
+            "productos-categorias":[],
+            "comparativa":[],
+            "cuentas":[],
+            "factura":[]
+        }
+    ]
+}

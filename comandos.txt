@@ -1,0 +1,10 @@
+¿Como atraer la informacion de Node.Js a Javascript  con el metodo de las APÏs?
+
+1. Primero tienes que abrir una terminal y escribir este comando:
+    json-server --watch Json\APIs.json
+
+2._ Segundo tienes abrir otra terminal de esa misma y activar el connection.js con este comando:
+    node connection.js
+
+A continuacion visualizaras como en la terminal de connection.js te mostrara todo el JSON y con ello podras verificar que
+campos se añadieron o se actualizaron.
