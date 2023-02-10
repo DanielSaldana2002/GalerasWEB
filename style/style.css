@@ -36,7 +36,7 @@ a{
     text-decoration:none;
     text-align:center;
     color:black;
-    background-color: rgb(231, 231, 123);
+    background-color: Lightyellow;
     padding:15px 60px;
     border-right:1px solid black;
     border-left:1px solid black;
@@ -53,3 +53,11 @@ a{
     font-size: 35px;
     margin-bottom: 6px;
 }
+
+img {
+   margin: auto;
+   display: block;
+   position: fixed;
+}
+
+
