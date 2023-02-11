@@ -32,6 +32,7 @@ a{
 }
 
 #menu a {
+    transition: 60ms;
     width:150px;
     text-decoration:none;
     text-align:center;
@@ -58,6 +59,30 @@ img {
    margin: auto;
    display: block;
    position: fixed;
+}
+
+video{
+    opacity: 50%;
+    width: 100%;
+}
+
+#s{
+    margin: 0;
+    padding: 0;
+    color: black;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    opacity: 99%;
+    background-color: black;
+}
+
+#prueba{
+    
+}
+
+#p{
+    color: rgb(1, 23, 49);
 }
 
 
