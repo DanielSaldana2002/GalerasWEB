@@ -3,7 +3,7 @@ var sql = require('mssql');
 var request = require('request');
 var val;
 let dbSettings = {};
-db(2);
+db(1);
 
 borrarDatosDeLaAPI();
 consultaMostrarTodo(true);
@@ -49,15 +49,15 @@ function borrarDatosDeLaAPI(){
 async function consultaMostrarTodo(validador){
    if(validador == true){
         const pool = await sql.connect(dbSettings);
-        const result = await pool.request().query("SELECT Products.ProductID, Products.ProductName, Categories.CategoryName FROM dbo.Products, dbo.Categories where Products.CategoryID = Categories.CategoryID;");
+        const result = await pool.request().query("SELECT * FROM dbo.categoria_productos;");
         console.log(result.recordsets[0]);
         var listaProductos = result.recordsets[0];
         const pool2 = await sql.connect(dbSettings);
-        const result2 = await pool2.request().query("SELECT Categories.CategoryID, Categories.CategoryName, Categories.Description FROM dbo.Categories;");
+        const result2 = await pool2.request().query("SELECT * FROM dbo.productos;");
         console.log(result2.recordsets[0]);
         var listaCategorias = result2.recordsets[0];
         const pool3 = await sql.connect(dbSettings);
-        const result3 = await pool3.request().query("SELECT Employees.EmployeeID, Employees.FirstName, Employees.LastName FROM dbo.Employees;");
+        const result3 = await pool3.request().query("");
         console.log(result3.recordsets[0]);
         var listaEmpleados = result3.recordsets[0];
 
@@ -68,7 +68,7 @@ async function consultaMostrarTodo(validador){
             'headers': {
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify({listaEmpleados,listaCategorias,listaProductos})
+            body: JSON.stringify({listaCategorias,listaProductos,listaProductos})
         };
         request(options, function (error, response) {
         if (error) throw new Error(error);

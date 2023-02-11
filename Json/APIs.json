@@ -1,4 +1,42 @@
 {
-  "BaseDeDatos": [],
+  "BaseDeDatos": [
+    {
+      "listaCategorias": [
+        {
+          "id_productos": 1,
+          "nombre_producto": "Camaron",
+          "precio": 169,
+          "fk_id_categoria": 1
+        },
+        {
+          "id_productos": 2,
+          "nombre_producto": "Ostion de placer",
+          "precio": 89,
+          "fk_id_categoria": 2
+        },
+        {
+          "id_productos": 3,
+          "nombre_producto": "Tostada tropical",
+          "precio": 70,
+          "fk_id_categoria": 3
+        }
+      ],
+      "listaProductos": [
+        {
+          "id_categoria": 1,
+          "nombre_categoria": "Cocteles"
+        },
+        {
+          "id_categoria": 2,
+          "nombre_categoria": "Ostras y Almejas"
+        },
+        {
+          "id_categoria": 3,
+          "nombre_categoria": "Entradas"
+        }
+      ],
+      "id": 1
+    }
+  ],
   "EnviarBaseDeDatos": []
 }
