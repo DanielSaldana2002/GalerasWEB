@@ -3,7 +3,7 @@ var sql = require('mssql');
 var request = require('request');
 var val;
 let dbSettings = {};
-db(1);
+db(1); 
 
 borrarDatosDeLaAPI();
 consultaMostrarTodo(true);
@@ -57,9 +57,21 @@ async function consultaMostrarTodo(validador){
         console.log(result2.recordsets[0]);
         var listaCategorias = result2.recordsets[0];
         const pool3 = await sql.connect(dbSettings);
-        const result3 = await pool3.request().query("");
+        const result3 = await pool3.request().query("SELECT * FROM dbo.mesas;");
         console.log(result3.recordsets[0]);
-        var listaEmpleados = result3.recordsets[0];
+        var listasMesas = result3.recordsets[0];
+        const pool4 = await sql.connect(dbSettings);
+        const result4 = await pool4.request().query("SELECT * FROM dbo.empleados;");
+        console.log(result4.recordsets[0]);
+        var listasEmpleados = result4.recordsets[0];
+        const pool5 = await sql.connect(dbSettings);
+        const result5 = await pool5.request().query("SELECT id_cuenta, nombre_sesion, apellido_p_sesion,apellido_m_sesion, usuario_sesion, contrasena_sesion FROM dbo.cuentas where cuentas.tipo_empleado = 1;");
+        console.log(result5.recordsets[0]);
+        var listaCuentasAdmi = result5.recordsets[0];
+        const pool6 = await sql.connect(dbSettings);
+        const result6 = await pool6.request().query("SELECT id_cuenta, nombre_sesion, apellido_p_sesion,apellido_m_sesion, usuario_sesion, contrasena_sesion FROM dbo.cuentas where cuentas.tipo_empleado = 0;");
+        console.log(result6.recordsets[0]);
+        var listaCuentasEmp = result6.recordsets[0];
 
         request = require('request');
         var options = {
@@ -68,7 +80,7 @@ async function consultaMostrarTodo(validador){
             'headers': {
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify({listaCategorias,listaProductos,listaProductos})
+            body: JSON.stringify({listaCategorias,listaProductos,listasMesas,listasEmpleados,listaCuentasAdmi,listaCuentasEmp})
         };
         request(options, function (error, response) {
         if (error) throw new Error(error);
