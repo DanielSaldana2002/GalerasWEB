@@ -2,9 +2,15 @@ body{
     margin: 0;
     padding: 0;
     left: 0;
+    right: 10;
     top: 15px;
     position: absolute;
+    animation: fondo-inicial linear 1s;
 
+}
+@keyframes fondo-inicial {
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}
 }
 #menu {
     padding: 0;
@@ -31,12 +37,13 @@ a{
 }
 
 #menu a {
+    transition: 60ms;
     width:150px;
     text-decoration:none;
     text-align:center;
     color:black;
-    background-color: rgb(231, 231, 123);
-    padding:15px 60px;
+    background-color: Lightyellow;
+    padding:15px 60px 20px;
     border-right:1px solid black;
     border-left:1px solid black;
     display:ruby-base; 
@@ -51,4 +58,38 @@ a{
     transition: 60ms;
     font-size: 35px;
     margin-bottom: 6px;
+}
+
+video{
+    opacity: 50%;
+    width: 100%;
+}
+
+#fondo{
+    margin-top: 43px;
+}
+
+#s{
+    margin: 0;
+    padding: 0;
+    color: black;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    opacity: 99%;
+    background-color: black;
+}
+
+#p{
+    color: rgb(1, 23, 49);
+}
+
+img{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 90%;
+    width: 6%;
+    bottom: 95%;
+    
 }

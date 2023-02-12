@@ -1,0 +1,171 @@
+{
+  "BaseDeDatos": [
+    {
+      "listaCategorias": [
+        {
+          "id_productos": 1,
+          "nombre_producto": "Camaron",
+          "precio": 169,
+          "fk_id_categoria": 1
+        },
+        {
+          "id_productos": 2,
+          "nombre_producto": "Ostion de placer",
+          "precio": 89,
+          "fk_id_categoria": 2
+        },
+        {
+          "id_productos": 3,
+          "nombre_producto": "Tostada tropical",
+          "precio": 70,
+          "fk_id_categoria": 3
+        }
+      ],
+      "listaProductos": [
+        {
+          "id_categoria": 1,
+          "nombre_categoria": "Cocteles"
+        },
+        {
+          "id_categoria": 2,
+          "nombre_categoria": "Ostras y Almejas"
+        },
+        {
+          "id_categoria": 3,
+          "nombre_categoria": "Entradas"
+        }
+      ],
+      "listasMesas": [
+        {
+          "id_mesas": 1,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 2,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 3,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 4,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 5,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 6,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 7,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 8,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 9,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 10,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 11,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 12,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 13,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 14,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 15,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 16,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 17,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 18,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 19,
+          "ocupacion": 1
+        },
+        {
+          "id_mesas": 20,
+          "ocupacion": 1
+        }
+      ],
+      "listasEmpleados": [
+        {
+          "id_empleado": 1,
+          "nombre_empleado": "Carlos Daniel",
+          "apellido_paterno": "Saldaña",
+          "apellido_materno": "Covarrubias"
+        },
+        {
+          "id_empleado": 2,
+          "nombre_empleado": "Moises",
+          "apellido_paterno": "Berumen",
+          "apellido_materno": "Cisneros"
+        },
+        {
+          "id_empleado": 3,
+          "nombre_empleado": "Rafael",
+          "apellido_paterno": "Flores",
+          "apellido_materno": "Alvarado"
+        }
+      ],
+      "listaCuentasAdmi": [
+        {
+          "id_cuenta": 1,
+          "nombre_sesion": "Carlos Daniel",
+          "apellido_p_sesion": "Saldaña",
+          "apellido_m_sesion": "Covarrubias",
+          "usuario_sesion": "Danielsaldana2002",
+          "contrasena_sesion": "20021120"
+        },
+        {
+          "id_cuenta": 2,
+          "nombre_sesion": "Moises",
+          "apellido_p_sesion": "Berumen",
+          "apellido_m_sesion": "Cisneros",
+          "usuario_sesion": "mosies",
+          "contrasena_sesion": "20021120"
+        }
+      ],
+      "listaCuentasEmp": [
+        {
+          "id_cuenta": 3,
+          "nombre_sesion": "Rafael Alejandro",
+          "apellido_p_sesion": "Flores",
+          "apellido_m_sesion": "Alvarado",
+          "usuario_sesion": "alvarado",
+          "contrasena_sesion": "20021120"
+        }
+      ],
+      "id": 1
+    }
+  ]
+}

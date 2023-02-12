@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    padding-left:35%;
+    background-color: rgb(248, 248, 108);
+    overflow: hidden;
+}
+
+img.imagen-galera-final{
+    width: 50%;
+    opacity: 0%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    img.imagen-galeraA{
+        animation: imagen-gal infinite 4s linear;
+    }
+}
+
+@keyframes imagen-gal {
+    0%{opacity: 0%;}
+    50%{opacity: 100%;}
+    100%{opacity: 0%;}
+}
