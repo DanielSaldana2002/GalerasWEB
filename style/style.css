@@ -93,3 +93,11 @@ img{
     bottom: 95%;
     
 }
+
+#contenido-menu{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    color: brown;
+}
