@@ -88,8 +88,13 @@ img{
     position: absolute;
     margin: 0;
     padding: 0;
-    left: 90%;
+    left: 91%;
     width: 6%;
     bottom: 92%;
     
+}
+
+#inicio-productos{
+    position: absolute;
+    margin-top: 2.5%;
 }
