@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificacion</title>
+    <script src="/html/objects/notificacion.js"></script>
+    <audio src="/audio/windows-notificacion.mp3" id="sound-notificacion"></audio>
+</head>
+<body>
+    <!--Margin left = 59.8em; <-- Animacion-->
+    <button id="test" onclick="leftMove()">Presiona</button>
+    <div id="box-notificacion">
+    </div>
+    <h3 id="title-notificacion">Notificacion de almacen</h3>
+    <p id="description-notificacion">Algunos de los ingredientes tiene poca cantidad</p>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        #test{
+            position: absolute;
+        }
+        #box-notificacion{
+            position: absolute;
+            background: linear-gradient(to bottom right , rgb(62, 62, 156),rgb(27, 25, 25));
+            padding-left: 25em;
+            padding-top: 7em;
+            margin-left: 100em;
+            margin-top: 31em;
+        }
+        #title-notificacion{
+            opacity: 0%;
+            position: absolute;
+            color: white;
+            text-shadow: 3px 0px 7px black;
+            margin-left: 52em;
+            margin-top: 27em;
+        }
+        #description-notificacion{
+            opacity: 0%;
+            position: absolute;
+            color: white;
+            text-shadow: 3px 0px 7px black;
+            margin-left: 62em;
+            margin-top: 34em;
+        }
+    </style>
+</body>
+</html>

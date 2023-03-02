@@ -15,7 +15,7 @@ function borrarDatosDeLaAPI(){
     request = require('request');
     var options = {
         'method': 'DELETE',
-        'url': 'http://localhost:3000/BaseDeDatos/1',
+        'url': 'https://danielsaldana2002.github.io/APIs.json/1',
         'headers': {
         }
     };
@@ -26,7 +26,7 @@ function borrarDatosDeLaAPI(){
     request = require('request');
     var options = {
         'method': 'DELETE',
-        'url': 'http://localhost:3000/BaseDeDatos/1',
+        'url': 'https://danielsaldana2002.github.io/APIs.json/1',
         'headers': {
         }
     };
@@ -37,7 +37,7 @@ function borrarDatosDeLaAPI(){
     request = require('request');
     var options = {
         'method': 'DELETE',
-        'url': 'http://localhost:3000/BaseDeDatos/1',
+        'url': 'https://danielsaldana2002.github.io/APIs.json/1',
         'headers': {
         }
     };
@@ -76,7 +76,7 @@ async function consultaMostrarTodo(validador){
         request = require('request');
         var options = {
             'method': 'POST',
-            'url': 'http://localhost:3000/BaseDeDatos',
+            'url': 'https://danielsaldana2002.github.io/APIs.json',
             'headers': {
             'Content-Type': 'application/json'
             },
@@ -111,5 +111,5 @@ function db(numero){
                 trustServerCertificate: true,
             },
         };
-    }
+    }   
 }
