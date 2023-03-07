@@ -13,9 +13,15 @@
     <div id="fondo"><p></p></div>
     <div id="box-relleno"><p></p></div>
     <div>
-        <div id="box-login" onmouseenter="animationBoxLoginEnter()" onmouseout="animationBoxLoginOut()"></div>
+        <div id="box-login" onmouseenter="animationBoxLoginEnter(),outBoxIngresar()" onmouseout="animationBoxLoginOut()" onclick="animationBoxLoginStatic(), exitBoxLogin(), exitBoxPassword()"></div>
         <div id="box-galeon"></div>
     </div>
     <h1 class="title-login">Iniciar sesion</h1>
+    <form action="">
+        <input type="text" title="Escribe tu usuario aqui..." placeholder="Usuario" name="user" id="login-usuario" autocomplete="on" onmouseenter="animationBoxLoginEnter()" onclick="enterBoxLogin(), animationBoxLoginStatic(),exitBoxPassword()"  required/>
+        <input type="password" title="Escribe tu contraseña aqui..." placeholder="Contraseña" name="password" id="password-usuario" onmouseenter="animationBoxLoginEnter()" onclick="exitBoxLogin(),enterBoxPassword(),animationBoxLoginStatic()"  required/>
+    </form>
+    <button id="iniciar-sesion" onmouseenter="animationBoxLoginStatic(),enterBoxIngresar()" onmousedown="outBoxIngresar()">Ingresar</button>
+    <img src="/img/1663952285593 (3).png" alt="Logo galeras" id="logo-galeras">
 </body>
 </html>

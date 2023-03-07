@@ -42,7 +42,7 @@ a{
     text-decoration:none;
     text-align:center;
     color:black;
-    background-color: Lightyellow;
+    background: linear-gradient(to bottom, rgb(148, 148, 74), white);
     padding:15px 60px 20px;
     border-right:1px solid black;
     border-left:1px solid black;
@@ -66,6 +66,7 @@ video{
 }
 
 #fondo{
+
     margin-top: 30px;
 }
 
