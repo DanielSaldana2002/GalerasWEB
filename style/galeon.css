@@ -1,7 +1,7 @@
 body{
     overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
+    flex: auto;
     margin: 0;
     padding: 0;
     left: 0;
@@ -26,7 +26,7 @@ body{
     0%{margin-left: 5em; margin-top: 31em;}
     10%{margin-top: 32em;}
     20%{margin-top: 31em;}
-    25%{margin-left: 20em;margin-top: 31em;}
+    25%{margin-left: 20em;margin-top: 32em;}
     30%{margin-top: 32em;}
     35%{margin-top: 31em;}
     45%{margin-top: 32em;}
@@ -96,7 +96,7 @@ h1.title-login{
     padding-bottom: 14em;
     padding-left: 37em;
     opacity: 0%;
-    transform: skewy(-2 deg);
+    transform: skewy(-5xdeg);
 }
 
 #login-usuario{
