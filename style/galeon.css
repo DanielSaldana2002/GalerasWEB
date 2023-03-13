@@ -566,7 +566,275 @@ a{
 }
 
 @media screen and (min-width: 1600px) {
-
+        #logo-galeon{
+        position: absolute;
+        margin-top: 35em;
+        animation: fondo-galeon infinite 15s;
+    }
+    
+    @keyframes fondo-galeon {
+        0%{margin-left: 5em; margin-top: 35em;}
+        10%{margin-top: 36em;}
+        20%{margin-top: 35em;}
+        25%{margin-left: 20em;margin-top: 36em;}
+        30%{margin-top: 36em;}
+        35%{margin-top: 35em;}
+        45%{margin-top: 36em;}
+        50%{margin-top: 35em; margin-left: 40em;}
+        53%{margin-top: 35em;}
+        60%{margin-top: 36em;}
+        65%{margin-top: 35em;}
+        70%{margin-top: 36em;}
+        75%{margin-left: 70em;}
+        100%{margin-left: 5em;}
+    }
+    
+    #fondo{
+        position: absolute;
+        background:linear-gradient(to top right,  blue, black);
+        width: 100%;
+        height: 100%;
+        opacity: 20%;
+    }
+    
+    #title-inicial-galeon{
+        position: absolute;
+        margin-left: 3.5em;
+        margin-bottom: 10em;
+        color: red;
+    }
+    
+    #logo-galeras{
+        position: absolute;
+        margin-left: 55em;
+        margin-top: 9.5em;
+        width: 15em;
+    }
+    
+    #box-login{
+        position: absolute;
+        margin-left: 6.5em;
+        margin-top: 8em;
+        padding-top: 15em;
+        padding-bottom: 10em;
+        padding-left: 36.5em;
+        color: white;
+        background-color: white;
+        opacity: 100%;
+        transform: skewy(-5deg);
+    }
+    
+    #box-galeon{
+        position: absolute;
+        margin-left: 43.3em;
+        margin-top: 8em;
+        padding-top: 10em;
+        padding-bottom: 15em;
+        padding-left: 35em;
+        color: white;
+        background: linear-gradient(to bottom right, rgb(201, 201, 74), white);
+        opacity: 100%;
+        transform: skewy(5deg);
+    }
+    
+    h1.title-login{
+        position: absolute;
+        margin-left: 9em;
+        margin-top: 6.5em;
+        text-shadow: 2px 1px 3px;
+    }
+    
+    #box-relleno{
+        position: absolute;
+        background-color: rgb(29, 138, 138);
+        margin-left: 4em;
+        margin-top: 5.9em;
+        padding-top: 10em;
+        padding-bottom: 14em;
+        padding-left: 37em;
+        opacity: 0%;
+        transform: skewy(-5deg);
+    }
+    
+    #login-usuario{
+        border-radius: 40em;
+        position: absolute;
+        margin-left: 18em;
+        margin-top: 20em;
+        padding-top: 0.5em;
+        padding-right: 7em;
+        padding-bottom: 0.5em;
+    }
+    
+    #password-usuario{
+        border-radius: 40em;
+        position: absolute;
+        margin-left: 18em;
+        margin-top: 24.5em;
+        padding-top: 0.5em;
+        padding-right: 7em;
+        padding-bottom: 0.5em;
+    }
+    
+    #iniciar-sesion{
+        border-radius: 40em 15em;
+        position: absolute;
+        margin-left: 21em;
+        margin-top: 30em;
+        padding-top: 0.5em;
+        padding-left: 5em;
+        padding-right: 5em;
+        padding-bottom: 0.5em;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 1px 3px rgb(29, 138, 138);
+    }
+        
+    #ola-0{
+        position: absolute;
+        margin-top: 40em;
+        margin-left: 0em;
+        animation: move-ola-0 infinite 3s
+    }
+    
+    @keyframes move-ola-0 {
+        0%{transform: skewX(0deg);}
+        50%{transform: skewy(-10deg);}
+    }
+    
+    #ola-1{
+        position: absolute;
+        margin-top: 40em;
+        margin-left: 5em;
+        animation: move-ola-1 infinite 3s
+    }
+    
+    @keyframes move-ola-1 {
+        0%{transform: skewX(0deg);}
+        50%{transform: skewy(3deg);}
+    }
+    
+    #ola-2{
+        position: absolute;
+        margin-top: 40em;
+        margin-left: 13em;
+        animation: move-ola-2 infinite 3s
+    }
+    
+    @keyframes move-ola-2 {
+        0%{transform: skewX(0deg);}
+        50%{transform: skewy(-10deg);}
+    }
+    
+    #ola-3{
+        position: absolute;
+        margin-top: 40em;
+        margin-left: 21em;
+        animation: move-ola-3 infinite 3s;
+    }
+    
+    @keyframes move-ola-3 {
+        0%{transform: skewX(0deg);}
+        50%{transform: skewy(10deg);}
+    }
+    
+    #ola-4{
+        position: absolute;
+        margin-top: 40em;
+        margin-left: 29em;
+        animation: move-ola-4 infinite 3s;
+    }
+    
+    @keyframes move-ola-4 {
+        0%{transform: skewX(0deg);}
+        50%{transform: skewy(-10deg);}
+    }
+    
+    #ola-5{
+        position: absolute;
+        margin-top: 40em;
+        margin-left: 37em;
+        animation: move-ola-5 infinite 3s;
+    }
+    
+    @keyframes move-ola-5 {
+        0%{margin-top: 40em;}
+        50%{margin-top: 39.2em;}
+    }
+    
+    #ola-6{
+        position: absolute;
+        margin-top: 40em;
+        margin-left: 45em;
+        animation: move-ola-6 infinite 3s;
+    }
+    
+    @keyframes move-ola-6 {
+        0%{transform: skewX(0deg);}
+        50%{transform: skewy(10deg);}
+    }
+    
+    #ola-7{
+        position: absolute;
+        margin-top: 40em;
+        margin-left: 53em;
+        animation: move-ola-7 infinite 3s;
+    }
+    
+    @keyframes move-ola-7 {
+        0%{transform: skewX(0deg);}
+        50%{transform: skewy(-10deg);}
+    }
+    
+    #ola-8{
+        position: absolute;
+        margin-top: 40em;
+        margin-left: 61em;
+        animation: move-ola-8 infinite 3s;
+    }
+    
+    @keyframes move-ola-8 {
+        0%{transform: skewX(0deg);}
+        50%{transform: skewy(10deg);}
+    }
+    
+    #ola-9{
+        position: absolute;
+        margin-top: 40em;
+        margin-left: 69em;
+        animation: move-ola-9 infinite 3s;
+    }
+    
+    @keyframes move-ola-9 {
+        0%{transform: skewX(0deg);}
+        50%{transform: skewy(-10deg);}
+    }
+    
+    #ola-10{
+        position: absolute;
+        margin-top: 40em;
+        margin-left: 77em;
+        animation: move-ola-10 infinite 3s;
+    }
+    
+    @keyframes move-ola-10 {
+        0%{transform: skewX(0deg);}
+        50%{transform: skewy(10deg);}
+    }
+    
+    #fondo-agua{
+        background: linear-gradient(rgb(78, 183, 202),rgb(40, 103, 119));
+        margin-top: 41em;
+        margin-left: 0em;
+        padding-left: 100em;
+        padding-top: 5em;
+        border-radius: 0em -10em/ 10em 2em;
+        animation: move-fondo infinite 3s;
+    }
+    
+    @keyframes move-fondo {
+        0%{}
+        50%{margin-top: 40.4em;}
+    }
 }
 
 @media screen and (min-width: 1800px) {
