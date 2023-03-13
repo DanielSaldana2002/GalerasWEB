@@ -17,4 +17,5 @@ function animationMarginOff(){
     styleContenido.transition = '900ms';
     styleContenido.opacity = '0%'
     style2.overflow = 'visible';
+    
 }

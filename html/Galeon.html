@@ -16,12 +16,11 @@
         <div id="box-login" onmouseenter="animationBoxLoginEnter(),outBoxIngresar()" onmouseout="animationBoxLoginOut()" onclick="animationBoxLoginStatic(), exitBoxLogin(), exitBoxPassword()"></div>
         <div id="box-galeon"></div>
     </div>
-    <h1 class="title-login">Iniciar sesion</h1>
     <form action="">
         <input type="text" title="Escribe tu usuario aqui..." placeholder="Usuario" name="user" id="login-usuario" autocomplete="on" onmouseenter="animationBoxLoginEnter()" onclick="enterBoxLogin(), animationBoxLoginStatic(),exitBoxPassword()"  required/>
         <input type="password" title="Escribe tu contraseña aqui..." placeholder="Contraseña" name="password" id="password-usuario" onmouseenter="animationBoxLoginEnter()" onclick="exitBoxLogin(),enterBoxPassword(),animationBoxLoginStatic()"  required/>
     </form>
-    <button id="iniciar-sesion" onmouseenter="animationBoxLoginStatic(),enterBoxIngresar()" onmousedown="outBoxIngresar()">Ingresar</button>
+    <button id="iniciar-sesion" onmouseenter="animationBoxLoginStatic(),enterBoxIngresar()" onmousedown="outBoxIngresar()"><a href="/html/index-galeon.html">Ingresar</a></button>
     <img src="/img/1663952285593 (3).png" alt="Logo galeras" id="logo-galeras">
     <img src="/img/pngwing.com.png" alt="logo de galeon" id="logo-galeon">
     <img src="/img/olas.png" alt="" id="ola-0">
@@ -36,5 +35,6 @@
     <img src="/img/olas.png" alt="" id="ola-9">
     <img src="/img/olas.png" alt="" id="ola-10">
     <div id="fondo-agua"><p></p></div>
+    <h1 class="title-login">Iniciar sesion</h1>
 </body>
 </html>

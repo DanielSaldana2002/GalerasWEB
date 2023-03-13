@@ -6,96 +6,237 @@ body{
     top: 15px;
     position: absolute;
     animation: fondo-inicial linear 1s;
-
 }
 @keyframes fondo-inicial {
     0%{opacity: 0%;}
     50%{opacity: 10;}
 }
-#menu {
-    padding: 0;
-    margin: 0;
-    list-style-type:none;
-    list-style-position:outside;
-}
+@media screen and (min-width: 0px) and (max-width: 1000px){
+    #body-desktop{
+        display: none;        
+    }
+    #fondo-movil{
+        overflow: hidden;
+        position: absolute;
+        background: linear-gradient(to right, rgb(148, 148, 74), white);
+        padding-left: 30em;
+        padding-top: 80em;
+        padding-bottom: 10em;
+    }
+    #body-android-mac{
+        position: absolute;
 
-#title{
-    font-size: 20px;
-    text-decoration: none;
-    text-align: center;
-    padding: 15px 0px;
-    margin-top: -12px
+    }
+    #item-movil{
+        position: absolute;
+        padding-left: 7em;
+        padding-top: 10em;
+    }
+    #imagen-movil{
+        width: 200px;
+    }
+    #title-movil{
+        position: absolute;
+        font-size: 20px;
+        padding-right: 0em;
+        width: 280px;
+    }
+    #description-movil{
+        position: absolute;
+        margin-top: 4em;
+        font-size: 15px;
+    }
 }
+@media screen and (min-width: 1000px) {
+    #menu {
+        padding: 0;
+        margin: 0;
+        list-style-type:none;
+        list-style-position:outside;
+    }
+    #body-android-mac{
+        display: none;  
+    }
+    #size-desktop{
+        transition: 60ms;
+        width:150px;
+        text-decoration:none;
+        text-align:center;
+        color:black;
+        background: linear-gradient(to bottom, rgb(148, 148, 74), white);
+        padding:15px 42px 20px;
+        border-right:1px solid black;
+        border-left:1px solid black;
+        display:ruby-base; 
+        margin-top: -12px;
 
-#title::backdrop{
-    transition: 50ms;
-    font-size: 0px;
-}
-
-a{
-    font-size: 20px;
-}
-
-#menu a {
-    transition: 60ms;
-    width:150px;
-    text-decoration:none;
-    text-align:center;
-    color:black;
-    background: linear-gradient(to bottom, rgb(148, 148, 74), white);
-    padding:15px 60px 20px;
-    border-right:1px solid black;
-    border-left:1px solid black;
-    display:ruby-base; 
-    margin-top: -12px;
-}
-
-#menu li {
-    float:left;
-}
     
-#menu a:hover {
-    transition: 60ms;
-    font-size: 35px;
-    margin-bottom: 6px;
+    }
+    #menu li{
+        float: left;
+    }
+    img{
+        position: absolute;
+        left: 103%;
+        top: -15px;
+    }
+    #video-galeras{
+        position: absolute;
+        background: linear-gradient(to right, rgb(148, 148, 74), white);
+        margin-top: 7.5%;
+        margin-left: 10%;
+        padding-bottom: 1%;
+        padding-left: 1%;
+        padding-right: 1%;
+        box-shadow: 5px 5px 15px;
+    }
+    #title-description-galeras{
+        position: absolute;
+        margin-left: 6em;
+        margin-top: 30em;
+        padding-right: 30em;
+    }
+    #title-inicial{
+        font-size: 70px;
+        text-shadow: 3px 0px 3px black;
+    }
+    #descripcion-general{
+        position: absolute;
+        margin-top: -1em;
+        font-size: 30px;
+    }
+
 }
-
-video{
-    opacity: 50%;
-    width: 100%;
-}
-
-#fondo{
-
-    margin-top: 30px;
-}
-
-#s{
-    margin: 0;
-    padding: 0;
-    color: black;
-    margin-top: 40px;
-    width: 100%;
-    height: 90%;
-    opacity: 99%;
-    background-color: black;
-}
-
-#p{
-    color: rgb(1, 23, 49);
-}
-
-img{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    left: 91%;
-    width: 6%;
-    bottom: 92%;
+@media screen and (min-width: 1200px) {
+    #body-android-mac{
+        display: none;  
+    }
+    #size-desktop{
+        transition: 60ms;
+        width:150px;
+        text-decoration:none;
+        text-align:center;
+        color:black;
+        background: linear-gradient(to bottom, rgb(148, 148, 74), white);
+        padding:15px 67px 20px;
+        border-right:1px solid black;
+        border-left:1px solid black;
+        display:ruby-base; 
+        margin-top: -12px;
     
+    }
+    #menu li{
+        float: left;
+    }
+    img{
+        position: absolute;
+        left: 105%;
+        top: -13px;
+    }
+    #video-galeras{
+        position: absolute;
+        background: linear-gradient(to right, rgb(148, 148, 74), white);
+        margin-top: 7.5%;
+        margin-left: 2%;
+        padding-bottom: 1%;
+        padding-left: 1%;
+        padding-right: 1%;
+        box-shadow: 5px 5px 15px;
+    }
+    #title-description-galeras{
+        position: absolute;
+        margin-left: 53em;
+        margin-top: 3em;
+        padding-right: 10em;
+    }
+    #title-inicial{
+        font-size: 70px;
+        text-shadow: 3px 0px 3px black;
+    }
+    #descripcion-general{
+        position: absolute;
+        margin-top: -1em;
+        font-size: 30px;
+    }
 }
+@media screen and (min-width: 1380px) {
+    #body-android-mac{
+        display: none;  
+    }
+    #size-desktop{
+        transition: 60ms;
+        width:150px;
+        text-decoration:none;
+        text-align:center;
+        color:black;
+        background: linear-gradient(to bottom, rgb(148, 148, 74), white);
+        padding:15px 73px 20px;
+        border-right:1px solid black;
+        border-left:1px solid black;
+        display:ruby-base; 
+        margin-top: -12px;
+    
+    }
+    #menu li{
+        float: left;
+    }
+    img{
+        position: absolute;
+        left: 103%;
+        top: -15px;
+    }
 
-#inicio-productos{
-    position: absolute;
-    margin-top: 2.5%;
+}
+@media screen and (min-width: 1600px) {
+    #body-android-mac{
+        display: none;  
+    }
+    #size-desktop{
+        transition: 60ms;
+        width:150px;
+        text-decoration:none;
+        text-align:center;
+        color:black;
+        background: linear-gradient(to bottom, rgb(148, 148, 74), white);
+        padding:15px 82px 20px;
+        border-right:1px solid black;
+        border-left:1px solid black;
+        display:ruby-base; 
+        margin-top: -12px;
+    
+    }
+    #menu li{
+        float: left;
+    }
+    img{
+        position: absolute;
+        left: 103%;
+        top: -15px;
+    }
+}
+@media screen and (min-width: 1800px) {
+    #body-android-mac{
+        display: none;  
+    }
+    #size-desktop{
+        transition: 60ms;
+        width:150px;
+        text-decoration:none;
+        text-align:center;
+        color:black;
+        background: linear-gradient(to bottom, rgb(148, 148, 74), white);
+        padding:15px 93px 20px;
+        border-right:1px solid black;
+        border-left:1px solid black;
+        display:ruby-base; 
+        margin-top: -12px; 
+    }
+    #menu li{
+        float: left;
+    }
+    img{
+        position: absolute;
+        left: 103%;
+        top: -15px;
+    }
 }

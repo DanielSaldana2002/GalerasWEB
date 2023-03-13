@@ -66,10 +66,12 @@ function enterBoxIngresar(){
     let boxIngresar = document.getElementById('iniciar-sesion').style;
     boxIngresar.transition = '300ms';
     boxIngresar.background = 'rgb(29, 138, 138)';
+    boxIngresar.cursor = 'pointer';
 }
 
 function outBoxIngresar(){
     let boxIngresar = document.getElementById('iniciar-sesion').style;
     boxIngresar.transition = '200ms';
     boxIngresar.background = 'white';
+    boxIngresar.cursor = 'default';
 }
