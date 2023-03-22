@@ -19,6 +19,12 @@
           "nombre_producto": "Tostada tropical",
           "precio": 70,
           "fk_id_categoria": 3
+        },
+        {
+          "id_productos": 4,
+          "nombre_producto": "Pulpo",
+          "precio": 169,
+          "fk_id_categoria": 1
         }
       ],
       "listaProductos": [
@@ -143,26 +149,18 @@
           "nombre_sesion": "Carlos Daniel",
           "apellido_p_sesion": "Saldaña",
           "apellido_m_sesion": "Covarrubias",
-          "usuario_sesion": "Danielsaldana2002",
-          "contrasena_sesion": "20021120"
+          "usuario_sesion": "daniel2002",
+          "contrasena_sesion": "20021120",
+          "fk_id_tipo_cuentas": 1
         },
         {
           "id_cuenta": 2,
-          "nombre_sesion": "Moises",
-          "apellido_p_sesion": "Berumen",
-          "apellido_m_sesion": "Cisneros",
-          "usuario_sesion": "mosies",
-          "contrasena_sesion": "20021120"
-        }
-      ],
-      "listaCuentasEmp": [
-        {
-          "id_cuenta": 3,
           "nombre_sesion": "Rafael Alejandro",
           "apellido_p_sesion": "Flores",
           "apellido_m_sesion": "Alvarado",
-          "usuario_sesion": "alvarado",
-          "contrasena_sesion": "20021120"
+          "usuario_sesion": "rafaelflores",
+          "contrasena_sesion": "20021120",
+          "fk_id_tipo_cuentas": 2
         }
       ],
       "id": 1

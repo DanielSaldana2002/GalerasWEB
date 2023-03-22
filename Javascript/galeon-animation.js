@@ -11,7 +11,7 @@ function animationBoxLoginEnter(){
     animacionLogo.opacity = '15%';
     animationBoxRelleno.marginLeft = '4em';
     animationBoxGaleon.opacity = '15%';
-    animationFondo.opacity = '8%'
+    animationFondo.opacity = '16%';
 }
 
 function animationBoxLoginStatic(){
@@ -20,10 +20,10 @@ function animationBoxLoginStatic(){
     let animationFondo = document.getElementById('fondo').style;
     let animacionLogo = document.getElementById('logo-galeras').style;
     animationBoxRelleno.opacity= '100%';
-    animacionLogo.opacity = '15%'
+    animacionLogo.opacity = '18%'
     animationBoxRelleno.marginLeft = '4em';
     animationBoxGaleon.opacity = '15%';
-    animationFondo.opacity = '8%'
+    animationFondo.opacity = '16%';
 }
 
 function animationBoxLoginOut(){
@@ -39,9 +39,12 @@ function animationBoxLoginOut(){
 }
 
 function enterBoxLogin(){
+    let boxError = document.getElementById('box-error-login').style;
     let box = document.getElementById('login-usuario').style;
     box.transition = '80ms';
     box.boxShadow = '0px 0px 15px 3px  rgb(29, 138, 138)';
+    boxError.transition = '150ms';
+    boxError.paddingLeft = '0%'
 }
 
 function exitBoxLogin(){
@@ -51,9 +54,12 @@ function exitBoxLogin(){
 }
 
 function enterBoxPassword(){
+    let boxError = document.getElementById('box-error-login').style;
     let box = document.getElementById('password-usuario').style;
     box.transition = '80ms';
     box.boxShadow = '0px 0px 15px 3px  rgb(29, 138, 138)';
+    boxError.transition = '150ms';
+    boxError.paddingLeft = '0%'
 }
 
 function exitBoxPassword(){
@@ -66,12 +72,20 @@ function enterBoxIngresar(){
     let boxIngresar = document.getElementById('iniciar-sesion').style;
     boxIngresar.transition = '300ms';
     boxIngresar.background = 'rgb(29, 138, 138)';
+    boxIngresar.color = 'white';
     boxIngresar.cursor = 'pointer';
 }
 
 function outBoxIngresar(){
     let boxIngresar = document.getElementById('iniciar-sesion').style;
     boxIngresar.transition = '200ms';
+    boxIngresar.color = 'black';
     boxIngresar.background = 'white';
     boxIngresar.cursor = 'default';
+}
+
+function exitboxError(){
+    let box = document.getElementById('box-error-login').style;
+    box.transition = '100ms';
+    box.paddingLeft = '0%';
 }

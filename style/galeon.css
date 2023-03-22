@@ -21,10 +21,6 @@ a{
     100%{opacity: 100%;}
 }
 
-@media screen and (min-width: 0px) and (max-width: 1000px){
-
-}
-
 @media screen and (min-width: 1000px) {
     #logo-galeon{
         position: absolute;
@@ -559,10 +555,18 @@ a{
         0%{}
         50%{margin-top: 36.4em;}
     }
-}
-
-@media screen and (min-width: 1380px) {
-
+    #box-error-login{
+        position: absolute;
+        background:linear-gradient(to top right, rgb(155, 7, 7), black);
+        padding-left: 0%;
+        opacity: 90%;
+    }
+    #message-error-login{
+        text-shadow: 5px 1px 3px black;
+        color: white;
+        font-size: 30px;
+        margin-left: -17.5em;
+    }
 }
 
 @media screen and (min-width: 1600px) {
@@ -835,8 +839,4 @@ a{
         0%{}
         50%{margin-top: 40.4em;}
     }
-}
-
-@media screen and (min-width: 1800px) {
-    
 }

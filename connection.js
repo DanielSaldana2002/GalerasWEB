@@ -15,7 +15,7 @@ function borrarDatosDeLaAPI(){
     request = require('request');
     var options = {
         'method': 'DELETE',
-        'url': 'https://danielsaldana2002.github.io/APIs.json/1',
+        'url': 'http://localhost:3000/BaseDeDatos/1',
         'headers': {
         }
     };
@@ -26,7 +26,7 @@ function borrarDatosDeLaAPI(){
     request = require('request');
     var options = {
         'method': 'DELETE',
-        'url': 'https://danielsaldana2002.github.io/APIs.json/1',
+        'url': 'http://localhost:3000/BaseDeDatos/1',
         'headers': {
         }
     };
@@ -37,7 +37,7 @@ function borrarDatosDeLaAPI(){
     request = require('request');
     var options = {
         'method': 'DELETE',
-        'url': 'https://danielsaldana2002.github.io/APIs.json/1',
+        'url': 'http://localhost:3000/BaseDeDatos/1',
         'headers': {
         }
     };
@@ -47,7 +47,7 @@ function borrarDatosDeLaAPI(){
 }
 
 async function consultaMostrarTodo(validador){
-   if(validador == true){
+    if(validador == true){
         const pool = await sql.connect(dbSettings);
         const result = await pool.request().query("SELECT * FROM dbo.categoria_productos;");
         console.log(result.recordsets[0]);
@@ -65,27 +65,22 @@ async function consultaMostrarTodo(validador){
         console.log(result4.recordsets[0]);
         var listasEmpleados = result4.recordsets[0];
         const pool5 = await sql.connect(dbSettings);
-        const result5 = await pool5.request().query("SELECT id_cuenta, nombre_sesion, apellido_p_sesion,apellido_m_sesion, usuario_sesion, contrasena_sesion FROM dbo.cuentas where cuentas.tipo_empleado = 1;");
+        const result5 = await pool5.request().query("SELECT * FROM dbo.cuentas");
         console.log(result5.recordsets[0]);
         var listaCuentasAdmi = result5.recordsets[0];
-        const pool6 = await sql.connect(dbSettings);
-        const result6 = await pool6.request().query("SELECT id_cuenta, nombre_sesion, apellido_p_sesion,apellido_m_sesion, usuario_sesion, contrasena_sesion FROM dbo.cuentas where cuentas.tipo_empleado = 0;");
-        console.log(result6.recordsets[0]);
-        var listaCuentasEmp = result6.recordsets[0];
-
         request = require('request');
         var options = {
             'method': 'POST',
-            'url': 'https://danielsaldana2002.github.io/APIs.json',
+            'url':  'http://localhost:3000/BaseDeDatos',
             'headers': {
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify({listaCategorias,listaProductos,listasMesas,listasEmpleados,listaCuentasAdmi,listaCuentasEmp})
+            body: JSON.stringify({listaCategorias,listaProductos,listasMesas,listasEmpleados,listaCuentasAdmi})
         };
         request(options, function (error, response) {
         if (error) throw new Error(error);
         });
-   }
+    }
 }
 
 function db(numero){
