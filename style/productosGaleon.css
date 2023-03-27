@@ -1,5 +1,4 @@
 body{
-    overflow: hidden;
     margin: 0;
     padding: 0;
     left: 0;
@@ -7,13 +6,49 @@ body{
     top: 15px;
     position: absolute;
     animation: fondo-inicial linear 1s;
-
 }
+
 @keyframes fondo-inicial {
     0%{opacity: 0%;}
     50%{opacity: 10;}
 }
+#message-connection{
+    display: none;
+}
+#box-categorias-productos{
+    padding-left: 2em;
+    margin-left: 1em;
+    margin-right: 30em;
+    margin-bottom: -1em;
+    background-color: rgb(29, 138, 138);
+    border-radius: 3em;
+    box-shadow: 4px 5px 2px 3px black;
+}
 
+#box-categorias-productos:hover{
+    padding-left: 2em;
+    margin-left: 1em;
+    margin-right: 30em;
+    margin-bottom: -1em;
+    background-color: rgb(13, 95, 95);
+    border-radius: 3em;
+    box-shadow: 4px 5px 2px 3px black;
+}
+
+#lista-productos-categorias{
+    font-size: 25px;
+    margin-top: -1em;
+    padding-bottom: 1em;
+}
+#title-categorias{
+    margin-top: 1.5em;
+    padding-left: 0em;
+    font-size: 40px;
+}
+ul,li{
+    list-style-type:none;
+    list-style-position:outside;
+}
 @media screen and (min-width:1270px){
     
     #menu {
@@ -100,7 +135,7 @@ body{
         flex-wrap: wrap;
         font-size: 20px;
         margin-top: 8em;
-        margin-left: -37.2em;
+        margin-left: -35.5em;
         padding-left: 1em;
         padding-right: 30em;
         text-align: justify;
@@ -115,13 +150,6 @@ body{
         position: absolute;
         margin-top: 1.5em;
         margin-left: 1.5em;
-    }
-    #list-function-galeon{
-        font-size: 20px;
-        margin-left: -35.5em;
-        padding-left: 1em;
-        padding-right: 30em;
-        text-align: justify;
     }
 }
 @media screen and (min-width:1400px){

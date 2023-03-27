@@ -17,11 +17,11 @@
         <div id="box-login" onmouseenter="animationBoxLoginEnter(),outBoxIngresar()" onmouseout="animationBoxLoginOut()" onclick="animationBoxLoginStatic(), exitBoxLogin(), exitBoxPassword(), exitboxError()"></div>
         <div id="box-galeon"></div>
     </div>
-    <form action="">
+    <form action="/php/verificacion.php" method="post">
         <input type="text" title="Escribe tu usuario aqui..." placeholder="Usuario" name="user" id="login-usuario" autocomplete="off" onmouseenter="animationBoxLoginEnter()" onclick="enterBoxLogin(), animationBoxLoginStatic(),exitBoxPassword()"  required/>
-        <input type="password" title="Escribe tu contraseña aqui..." placeholder="Contraseña" name="password" id="password-usuario" onmouseenter="animationBoxLoginEnter()" onclick="exitBoxLogin(),enterBoxPassword(),animationBoxLoginStatic()"  required/>
+        <input type="text" title="Escribe tu contraseña aqui..." placeholder="Contraseña" name="password" id="password-usuario" autocomplete="off" onmouseenter="animationBoxLoginEnter()" onclick="exitBoxLogin(),enterBoxPassword(),animationBoxLoginStatic()"  required/>
+        <button type="submit" id="iniciar-sesion" onmouseenter="animationBoxLoginStatic(),enterBoxIngresar()" onmousedown="outBoxIngresar()">Ingresar</button>
     </form>
-    <button id="iniciar-sesion" onmouseenter="animationBoxLoginStatic(),enterBoxIngresar()" onmousedown="outBoxIngresar()" onclick="validadorInicioSesion(), exitBoxLogin(), exitBoxPassword(), traerInformacion()">Ingresar</button>
     <img src="/img/1663952285593 (3).png" alt="Logo galeras" id="logo-galeras">
     <img src="/img/pngwing.com.png" alt="logo de galeon" id="logo-galeon">
     <img src="/img/olas.png" alt="" id="ola-0">
@@ -36,10 +36,9 @@
     <img src="/img/olas.png" alt="" id="ola-9">
     <img src="/img/olas.png" alt="" id="ola-10">
     <div id="fondo-agua"><p></p></div>
-    <h1 id="title-login1" class="title-login"  onmouseenter="animationBoxLoginEnter(),outBoxIngresar()" onmouseout="animationBoxLoginOut()" onclick="animationBoxLoginStatic(), exitBoxLogin(), exitBoxPassword(), exitboxError()">Iniciar sesion</h1>
+    <h1 id="title-login1" class="title-login" onmouseenter="animationBoxLoginEnter(),outBoxIngresar()" onmouseout="animationBoxLoginOut()" onclick="animationBoxLoginStatic(), exitBoxLogin(), exitBoxPassword(), exitboxError()">Iniciar sesion</h1>
     <div id="box-error-login">
         <p id="message-error-login"></p>
-
     </div>
 </body>
 </html>

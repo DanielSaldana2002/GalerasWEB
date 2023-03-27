@@ -286,6 +286,11 @@ a{
     }
 }
 @media screen and (min-width: 1200px){
+    #aux{
+        position: absolute;
+        background-color: white;
+        color: red;
+    }
     #logo-galeon{
         position: absolute;
         margin-top: 32em;
@@ -294,14 +299,15 @@ a{
     
     @keyframes fondo-galeon {
         0%{margin-left: 5em; margin-top: 32em;}
-        10%{margin-top: 32em;}
-        20%{margin-top: 31em;}
-        25%{margin-left: 20em;margin-top: 32em;}
+        7%{margin-top: 32em;}
+        10%{margin-top: 31em;}
+        22%{margin-top: 32em;}
+        24%{margin-left: 22em;margin-top: 32em;}
         30%{margin-top: 32em;}
         35%{margin-top: 31em;}
-        45%{margin-top: 32em;}
-        50%{margin-top: 31em; margin-left: 40em;}
-        53%{margin-top: 31em;}
+        43%{margin-top: 32em;}
+        49%{margin-top: 31em; margin-left: 40em;}
+        56%{margin-top: 32em;}
         60%{margin-top: 32em;}
         65%{margin-top: 31em;}
         70%{margin-top: 32em;}

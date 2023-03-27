@@ -4,28 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos | Galeras</title>
+    <title>Productos | Galeon</title>
     <link rel="icon" href="/img/1663952285593 (3).png" type="image/png" sizes="24x24">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/productos.css">
-    <script src="/Javascript/main.js"></script>
+    <link rel="stylesheet" href="/style/productosGaleon.css">
+    <script src="/Javascript/galeon.js"></script>
+    <script src="/Javascript/index-galeon.js"></script>
 </head>
 <body>
-<div id="body-desktop">
-        <ul id="menu">
-            <li><a href="/html/index.html" id="size-desktop">Inicio</a></li>
-            <li><a href="" id="size-desktop">Sucursal</a></li>
-            <li><a href="" id="size-desktop">Productos</a></li>
-            <li><a href="" id="size-desktop">Eventos</a></li>
-            <li><a href="" id="size-desktop">Comentarios</a></li>
-            <li><a href="/php/galeon.php" id="size-desktop">Galeon</a></li>
-        </ul>
-        <img src="/img/1663952285593 (3).png">
+<div>
+    <ul id="menu">
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/html/index.html" id="title">Galeras</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Productos</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/html/Productos.html">Eventos</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Comparativa</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Almacen</a></li>    
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Cuentas</a></li>   
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Historial</a></li>   
+    </ul>
     </div>
-    <select name="" id="">
-        <option value="">Administrador</option>
-        <option value="">Estandar</option>
-    </select>
     <?php
         $stmt = "DESKTOP-DANIEL";
         $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  

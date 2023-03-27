@@ -51,3 +51,8 @@ function validadorInicioSesion(){
         }
     }
 }
+
+function traerInformacion(){
+    let titulo = document.getElementById('title-login1').innerHTML;
+    console.log(titulo);
+}
