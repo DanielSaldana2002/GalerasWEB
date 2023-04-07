@@ -108,6 +108,7 @@ body{
 
 }
 @media screen and (min-width: 1200px) {
+
     #body-android-mac{
         display: none;  
     }
@@ -132,6 +133,7 @@ body{
         position: absolute;
         left: 105%;
         top: -13px;
+        filter: drop-shadow(8px 5px 7px rgb(148, 148, 74));
     }
     #video-galeras{
         position: absolute;

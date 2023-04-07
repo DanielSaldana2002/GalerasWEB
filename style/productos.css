@@ -14,37 +14,40 @@ body{
 #message-connection{
     display: none;
 }
-#box-categorias-productos{
-    padding-left: 2em;
-    margin-left: 1em;
-    margin-right: 30em;
-    margin-bottom: -1em;
-    background-color: rgb(148, 148, 74);
-    border-radius: 3em;
-    box-shadow: 4px 5px 2px 3px black;
-}
-
-#box-categorias-productos:hover{
-    padding-left: 2em;
-    margin-left: 1em;
-    margin-right: 30em;
-    margin-bottom: -1em;
-    background-color: rgb(112, 112, 23);
-    border-radius: 3em;
-    box-shadow: 4px 5px 2px 3px black;
-}
-
-#lista-productos-categorias{
-    font-size: 25px;
-    margin-top: -1em;
-    padding-bottom: 1em;
-}
-#title-categorias{
-    margin-top: 1.5em;
-    padding-left: 0em;
-    font-size: 40px;
-}
 ul,li{
     list-style-type:none;
     list-style-position:outside;
+}
+#box-producto-mas-vendidos{
+    position: absolute;
+    margin-top: 4em;
+    margin-left: 1.5em;
+    margin-right: 25em;
+    padding-left: 1em;
+}
+#box-producto-mas-vendidos img{
+    width: 200px;
+    padding-left: 4em;
+    padding-top: 2em;
+}
+#box-producto-mas-vendidos p{
+    font-size: 20px;
+}
+#box-bebidas-mas-vendidos{
+    position: absolute;
+    margin-top: 23em;
+    margin-right: 5em;
+    margin-left: 20em;
+    padding-left: 1em;
+}
+#box-bebidas-mas-vendidos p{
+    font-size: 20px;
+}
+#box-image-left{
+    position: absolute;
+}
+#box-image-left img{
+    width: 200px;
+    margin-top: 25em;
+    margin-left: 4em;
 }

@@ -13,13 +13,14 @@
 <body>
 <div>
     <ul id="menu">
+    <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/index-galeon.php">Inicio</a></li>
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/html/index.html" id="title">Galeras</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Productos</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/html/Productos.html">Eventos</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/productosGaleon.php">Productos</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Eventos</a></li>
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Comparativa</a></li>
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Almacen</a></li>    
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Cuentas</a></li>   
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Historial</a></li>   
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Historial</a></li>    
     </ul>
     </div>
     <?php

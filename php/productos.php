@@ -11,7 +11,7 @@
     <script src="/Javascript/main.js"></script>
 </head>
 <body>
-<div id="body-desktop">
+    <div id="body-desktop">
         <ul id="menu">
             <li><a href="/html/index.html" id="size-desktop">Inicio</a></li>
             <li><a href="" id="size-desktop">Sucursal</a></li>
@@ -22,28 +22,42 @@
         </ul>
         <img src="/img/1663952285593 (3).png">
     </div>
-    <select name="" id="">
-        <option value="">Administrador</option>
-        <option value="">Estandar</option>
-    </select>
-    <?php
-        $stmt = "DESKTOP-DANIEL";
-        $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
-        $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
-        $sql="SELECT nombre_categoria, nombre_producto, precio FROM dbo.productos INNER JOIN dbo.categoria_productos on id_categoria = fk_id_categoria;";
-        $res=sqlsrv_query($con,$sql);
-        while($row=sqlsrv_fetch_array($res)){
-            $infoBD = <<<TEXTO
-            <div id='box-categorias-productos'>
-                <h3 id='title-categorias'>$row[nombre_categoria]</h3>
-                <ul id='lista-productos-categorias'>
-                    <li>Nombre del producto: $row[nombre_producto]</li>
-                    <li>Precio del producto: $row[precio]</li>
-                </ul>
-            </div>
-            TEXTO;
-            echo $infoBD;
-        }
-    ?>
+    <div id='box-producto-mas-vendidos'>
+        <img src="https://cdn-icons-png.flaticon.com/512/76/76263.png">
+        <h1>Platillo mas vendido</h1>
+        <?php
+            $stmt = "DESKTOP-DANIEL";
+            $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+            $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
+            $sql="Select TOP 1 nombre_producto, nombre_categoria, SUM(cantidad) total from tickets_pedidos INNER JOIN dbo.productos ON id_productos = fk_id_producto_p INNER JOIN dbo.categoria_productos ON id_categoria = fk_id_categoria  WHERE nombre_categoria != 'Cervezas' group by nombre_producto, nombre_categoria order by total desc";
+            $res=sqlsrv_query($con,$sql);
+            while($row=sqlsrv_fetch_array($res)){
+                $producto = $row['nombre_producto'];  
+                $categoria = $row['nombre_categoria'];  
+            }
+            echo "<h3>$categoria de $producto</h3>";
+        ?>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus deserunt ab qui dolores quae laborum voluptate veritatis voluptatum? Fuga, corporis iusto hic atque aut obcaecati consequatur suscipit veniam neque.</p>
+
+    </div>
+    <div id='box-image-left'>
+            <img src="https://cdn-icons-png.flaticon.com/512/31/31930.png">
+    </div>
+    <div id='box-bebidas-mas-vendidos'>
+        <h1>Bebida mas vendida</h1>
+        <?php
+            $stmt = "DESKTOP-DANIEL";
+            $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+            $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
+            $sql="Select TOP 1 nombre_producto, nombre_categoria, SUM(cantidad) total from tickets_pedidos INNER JOIN dbo.productos ON id_productos = fk_id_producto_p INNER JOIN dbo.categoria_productos ON id_categoria = fk_id_categoria WHERE nombre_categoria = 'Cervezas' group by nombre_producto, nombre_categoria order by total desc ";
+            $res=sqlsrv_query($con,$sql);
+            while($row=sqlsrv_fetch_array($res)){
+                $producto = $row['nombre_producto'];  
+                $categoria = $row['nombre_categoria'];  
+            }
+            echo "<h3>$categoria $producto</h3>";
+        ?>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus deserunt ab qui dolores quae laborum voluptate veritatis voluptatum? Fuga, corporis iusto hic atque aut obcaecati consequatur suscipit veniam neque.</p>
+    </div>
 </body>
 </html>

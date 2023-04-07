@@ -13,6 +13,7 @@
     <script src="/Javascript/index-galeon.js"></script>
     <div>
         <ul id="menu">
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/index-galeon.php">Inicio</a></li>
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/html/index.html" id="title">Galeras</a></li>
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/productosGaleon.php">Productos</a></li>
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Eventos</a></li>
