@@ -14,10 +14,10 @@
     <div id="body-desktop">
         <ul id="menu">
             <li><a href="/html/index.html" id="size-desktop">Inicio</a></li>
-            <li><a href="" id="size-desktop">Sucursal</a></li>
-            <li><a href="" id="size-desktop">Productos</a></li>
+            <li><a href="/php/sucursal.php" id="size-desktop">Sucursal</a></li>
+            <li><a href="/php/productos.php" id="size-desktop">Productos</a></li>
             <li><a href="" id="size-desktop">Eventos</a></li>
-            <li><a href="" id="size-desktop">Comentarios</a></li>
+            <li><a href="/php/comentarios.php" id="size-desktop">Comentarios</a></li>
             <li><a href="/php/galeon.php" id="size-desktop">Galeon</a></li>
         </ul>
         <img src="/img/1663952285593 (3).png">
@@ -26,8 +26,8 @@
         <img src="https://cdn-icons-png.flaticon.com/512/76/76263.png">
         <h1>Platillo mas vendido</h1>
         <?php
-            $stmt = "DESKTOP-DANIEL";
-            $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+            $stmt = "209.126.107.8";
+            $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120");  
             $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
             $sql="Select TOP 1 nombre_producto, nombre_categoria, SUM(cantidad) total from tickets_pedidos INNER JOIN dbo.productos ON id_productos = fk_id_producto_p INNER JOIN dbo.categoria_productos ON id_categoria = fk_id_categoria  WHERE nombre_categoria != 'Cervezas' group by nombre_producto, nombre_categoria order by total desc";
             $res=sqlsrv_query($con,$sql);
@@ -46,8 +46,8 @@
     <div id='box-bebidas-mas-vendidos'>
         <h1>Bebida mas vendida</h1>
         <?php
-            $stmt = "DESKTOP-DANIEL";
-            $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+            $stmt = "209.126.107.8";
+            $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120");   
             $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
             $sql="Select TOP 1 nombre_producto, nombre_categoria, SUM(cantidad) total from tickets_pedidos INNER JOIN dbo.productos ON id_productos = fk_id_producto_p INNER JOIN dbo.categoria_productos ON id_categoria = fk_id_categoria WHERE nombre_categoria = 'Cervezas' group by nombre_producto, nombre_categoria order by total desc ";
             $res=sqlsrv_query($con,$sql);

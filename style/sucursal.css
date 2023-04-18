@@ -1,0 +1,24 @@
+#box-maps{
+    position: absolute;
+    margin-left: 2em;
+    margin-top: 3.8em;
+    box-shadow: 5px 6px 18px grey;
+}
+
+#texto-maps{
+    position: absolute;
+    margin-left: 45em;
+}
+
+#texto-maps h1{
+
+    font-size: 85px;
+    color: rgb(18, 104, 116);
+    text-shadow: 3px 2px 8px rgb(45, 136, 148);
+    padding-right: 3.7em;
+}
+#texto-maps h2{
+    font-size: 45px;
+    color: rgb(18, 104, 116);
+    text-shadow: 3px 2px 8px rgb(45, 136, 148);
+}

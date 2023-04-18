@@ -1,0 +1,54 @@
+#formComentarios{
+    position: absolute;
+    padding-top: 3em;
+    padding-left: 1em;
+}
+#formComentarios p{
+    font-size: 35px;
+}
+#formComentarios h3{
+    font-size: 35px;
+}
+#comentarioInput{
+    transition: 700ms;
+    font-size: 26px;
+}
+#comentarioInput:hover{
+    transition: 300ms;
+    box-shadow: 3px 2px 15px rgb(0, 0, 0);
+}
+#comentarioInput::placeholder{
+    box-shadow: 3px 2px 25px rgb(4, 56, 63);
+}
+#boxComentarios{
+    transition: 300ms;
+    margin-top: 3em;
+    background-color: rgb(206, 181, 42);
+    box-shadow: 1px 1px 4px black;
+}
+#boxComentarios:hover{
+    transition: 350ms;
+    transform: scale(1.15);
+    margin-left: 7em;
+    box-shadow: 1px 1px 8px black;
+}
+#boxComentarios::placeholder{
+    transform: scale(0);
+}
+#sendComentario{
+    margin-left: 80.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+#puntacion{
+    transition: 300ms;
+    font-size: 25px;
+    padding-right: 0.5em;
+}
+#puntacion:hover{
+    transition: 300ms;
+    box-shadow: 3px 2px 8px rgb(0, 0, 0);
+}
+#puntacion::placeholder{
+    box-shadow: 0px 0px 0px ;
+}

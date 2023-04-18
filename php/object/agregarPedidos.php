@@ -21,8 +21,8 @@
         <h1>AGREGAR TICKET:</h1>
         <form action="/php/object/verificacionTicket.php" method="post">
             <?php
-                $stmt = "DESKTOP-DANIEL";
-                $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+                $stmt = "209.126.107.8";
+                $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT COUNT(id_tickets) id FROM dbo.tickets;";
                 $res=sqlsrv_query($con,$sql);
