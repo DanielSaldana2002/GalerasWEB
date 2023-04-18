@@ -21,7 +21,7 @@
         </ul>
         <img src="/img/1663952285593 (3).png">
         <div id="formComentarios">
-            <form action="" method="post">
+            <form action="/php/comentarioVerificacion.php" method="post">
                 <p>Escribe tu comentario:</p>
                 <textarea name="comentarioGaleras" id="comentarioInput" cols="80" rows="10"></textarea>
                 <p>Puntuacion: <select name="cPuntacion" id="puntacion">
@@ -31,7 +31,7 @@
                     <option>4⭐</option>
                     <option>5⭐</option>
                 </select></p>
-                <button id="sendComentario">Enviar</button>
+                <button type="submit" id="sendComentario">Enviar</button>
             </form>
             <?php
                 $stmt = "209.126.107.8";
