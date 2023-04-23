@@ -19,7 +19,7 @@
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Eventos</a></li>
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Comparativa</a></li>
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Almacen</a></li>    
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Cuentas</a></li>   
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/cuentas.php">Cuentas</a></li>   
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Historial</a></li>   
         </ul>
         <div id="box-title-galeon"></div>
