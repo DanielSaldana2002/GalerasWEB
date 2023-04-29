@@ -1,0 +1,60 @@
+body{
+    background-color: rgb(33, 145, 145);
+}
+#boxForm{
+    position: absolute;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-bottom: -1em;   
+    margin-left: 21em;
+}
+#boxForm input{
+    transition: 300ms;
+    font-size: 29px;
+    margin-top: 0.4em;
+    padding-right: 0.2em;
+}
+#boxForm textarea{
+    transition: 300ms;
+    font-size: 29px;
+    margin-top: 0.4em;
+}
+#boxForm select{
+    transition: 300ms;
+    font-size: 29px;
+    margin-top: 0.9em;
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+#boxForm h1{
+    color: rgb(73, 216, 156);
+    font-size: 40px;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+#boxForm button{
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+    font-size: 30px;
+    margin-left: 0.8em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#boxForm input:hover{
+    transition: 300ms;
+    box-shadow: 1px 1px 10px rgb(13, 47, 70);
+}
+#boxForm select:hover{
+    transition: 300ms;
+    box-shadow: 1px 1px 10px rgb(13, 47, 70);
+}
+#shadowForm{
+    background: linear-gradient(to bottom, rgb(33, 145, 145), rgb(206, 204, 204));
+    position: absolute;
+    padding-left: 40em;
+    margin-left: 22.5em;
+    margin-top: 4em;
+    padding-top: 31em;
+    box-shadow: 1px 1px 10px rgb(99, 97, 97);
+}

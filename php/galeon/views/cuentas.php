@@ -49,7 +49,11 @@
         }
         echo <<<TEXTO
             <h1></h1>
+            <form action="/php/registroCuentas.php" method="post">
+                <button type="submit" id="createAccount">Crear</button>
+            </form>
             <div id="buttom-cuenta">
+                <h2>Crear una cuenta</h2>
                 <h2>Activos:</h2>
                 <form action="" method="post">
                     <input type="text" placeholder="Buscar usuario..." autocomplete="off" name="userCuentas" id="">

@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $_SESSION['usuario'] = $_POST['user'];
     $usuario = $_POST['user'];
     $password = $_POST['password'];
     $stmt = "209.126.107.8";

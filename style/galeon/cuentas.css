@@ -51,6 +51,12 @@ tr:hover{
     margin-left: 19em;
     font-size: 17px;
 }
+#createAccount{
+    position: absolute;
+    margin-left: 22em;
+    margin-top: 3.5em;
+    font-size: 17px;
+}
 #buttom-cuenta input{
     margin-left: 4em;
     position: absolute;
