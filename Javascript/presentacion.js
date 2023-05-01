@@ -13,5 +13,5 @@ setTimeout(() => {
 }, 6000);
 
 setTimeout(() => {
-    location.href = 'http://127.0.0.1:5501/html/index.html';
+    location.href = 'http://127.0.0.1:5501/html/galeras/index.html';
 }, 6750);

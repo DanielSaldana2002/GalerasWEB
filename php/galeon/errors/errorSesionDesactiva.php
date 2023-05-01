@@ -20,7 +20,16 @@
     <div id='size-imagen'>
         <div id='title-message-box'>
             <h1>ERROR INICIO DE SESION</h1>
-            <p>El usuario o contraseña es incorrecta, favor de contactarse con su administrador para recuperar su cuenta.</p>
+            <?php
+                session_start();
+                echo <<<TEXTO
+                    <p>
+                        El usuario iniciado esta desactivado,
+                        favor de contactarse con su administrador para cambiar
+                        el estatus de la cuenta.
+                    </p>
+                TEXTO;
+            ?>
             <button><a href="/php/galeon/views/galeon.php">Regresar a Galeon</a></button>
         </div>
         <img src="/img/1663952285593 (3).png" alt="Logo galeras" id="logo-galeras">

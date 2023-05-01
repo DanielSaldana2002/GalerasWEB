@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/1663952285593 (3).png" type="image/png" sizes="24x24">
-    <link rel="stylesheet" href="/style/modificarCuentas.css">
+    <link rel="stylesheet" href="/style/galeon/modificarCuentas.css">
     <title>Modificador de cuentas | Galeon</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
             $tipoUsuario = $row['nombre_tipo_cuentas'];
         }
         echo <<<TEXTO
-        <form action="/php/verificacionModificacionCuentas.php" method="post" id="formularioRegistro">
+        <form action="/php/galeon/controllers/verificacionModificacionCuentas.php" method="post" id="formularioRegistro">
             <h1>Modificar cuenta</h1>    
             <input type="text" value="$nombre" name="NombreUser" placeholder="Nombre" autocomplete="off" required></br>
             <input type="text" value="$apellidoP" name="apellidoPaternoUser" id="apellidoPaternoUserID" placeholder="Apellido paterno" autocomplete="off" required></br>

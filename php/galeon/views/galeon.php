@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de sesion | Galeon</title>
     <link rel="icon" href="/img/1663952285593 (3).png" type="image/png" sizes="24x24">
-    <link rel="stylesheet" href="/style/galeon.css">
+    <link rel="stylesheet" href="/style/galeon/galeon.css">
 </head>
 <body>
     <script src="/Javascript/galeon.js"></script>
@@ -17,7 +17,7 @@
         <div id="box-login" onmouseenter="animationBoxLoginEnter(),outBoxIngresar()" onmouseout="animationBoxLoginOut()" onclick="animationBoxLoginStatic(), exitBoxLogin(), exitBoxPassword(), exitboxError()"></div>
         <div id="box-galeon"></div>
     </div>
-    <form action="/php/verificacion.php" method="post">
+    <form action="/php/galeon/controllers/verificacion.php" method="post">
         <input type="text" title="Escribe tu usuario aqui..." placeholder="Usuario" name="user" id="login-usuario" autocomplete="off" onmouseenter="animationBoxLoginEnter()" onclick="enterBoxLogin(), animationBoxLoginStatic(),exitBoxPassword()"  required/>
         <input type="text" title="Escribe tu contraseña aqui..." placeholder="Contraseña" name="password" id="password-usuario" autocomplete="off" onmouseenter="animationBoxLoginEnter()" onclick="exitBoxLogin(),enterBoxPassword(),animationBoxLoginStatic()"  required/>
         <button type="submit" id="iniciar-sesion" onmouseenter="animationBoxLoginStatic(),enterBoxIngresar()" onmousedown="outBoxIngresar()">Ingresar</button>

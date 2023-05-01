@@ -1,0 +1,34 @@
+REFERENCIAS
+
+Galeras:
+/html/galeras/index.html
+
+Galeon:
+/php/galeon/views/index-galeon.php
+/html/galeras/index.html
+/php/galeon/views/productosGaleon.php
+/php/galeon/views/eventosGaleon.php
+/php/galeon/views/comparativaGaleon.php
+/php/galeon/views/almacenGaleon.php
+/php/galeon/views/cuentas.php
+/php/galeon/views/historial.php
+
+CODIGO
+
+Galeras:
+            <li><a href="/html/galeras/index.html" id="size-desktop">Inicio</a></li>
+            <li><a href="/php/galeras/views/sucursal.php" id="size-desktop">Sucursal</a></li>
+            <li><a href="/php/galeras/views/productos.php" id="size-desktop">Productos</a></li>
+            <li><a href="/php/galeras/views/eventos.php" id="size-desktop">Eventos</a></li>
+            <li><a href="/php/galeras/views/comentarios.php" id="size-desktop">Comentarios</a></li>
+            <li><a href="/php/galeon/views/galeon.php" id="size-desktop">Galeon</a></li>
+
+Galeon:
+        <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/index-galeon.php">Inicio</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/html/galeras/index.html" id="title">Galeras</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/productosGaleon.php">Productos</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/eventosGaleon.php">Eventos</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/comparativaGaleon.php">Comparativa</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/almacenGaleon.php">Almacen</a></li>    
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/cuentas.php">Cuentas</a></li>   
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/historial.php">Historial</a></li>   

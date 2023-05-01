@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error | Inicio de sesion</title>
     <link rel="icon" href="/img/1663952285593 (3).png" type="image/png" sizes="24x24">
-    <link rel="stylesheet" href="/style/errorSesion.css">
+    <link rel="stylesheet" href="/style/galeon/errorSesion.css">
 </head>
 <body>
     <script src="/Javascript/galeon.js"></script>
@@ -30,7 +30,7 @@
                     </p>
                 TEXTO;
             ?>
-            <button><a href="/php/galeon.php">Regresar a Galeon</a></button>
+            <button><a href="/php/galeon/views/galeon.php">Regresar a Galeon</a></button>
         </div>
         <img src="/img/1663952285593 (3).png" alt="Logo galeras" id="logo-galeras">
     </div>

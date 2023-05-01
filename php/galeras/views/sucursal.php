@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sucursal | Galeras</title>
     <link rel="icon" href="/img/1663952285593 (3).png" type="image/png" sizes="24x24">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/sucursal.css">
+    <link rel="stylesheet" href="/style/galeras/style.css">
+    <link rel="stylesheet" href="/style/galeras/sucursal.css">
     <script src="/Javascript/main.js"></script>
 </head>
 <body>
     <div id="body-desktop">
         <ul id="menu">
-            <li><a href="/html/index.html" id="size-desktop">Inicio</a></li>
-            <li><a href="/php/sucursal.php" id="size-desktop">Sucursal</a></li>
-            <li><a href="/php/productos.php" id="size-desktop">Productos</a></li>
-            <li><a href="" id="size-desktop">Eventos</a></li>
-            <li><a href="/php/comentarios.php" id="size-desktop">Comentarios</a></li>
-            <li><a href="/php/galeon.php" id="size-desktop">Galeon</a></li>
+            <li><a href="/html/galeras/index.html" id="size-desktop">Inicio</a></li>
+            <li><a href="/php/galeras/views/sucursal.php" id="size-desktop">Sucursal</a></li>
+            <li><a href="/php/galeras/views/productos.php" id="size-desktop">Productos</a></li>
+            <li><a href="/php/galeras/views/eventos.php" id="size-desktop">Eventos</a></li>
+            <li><a href="/php/galeras/views/comentarios.php" id="size-desktop">Comentarios</a></li>
+            <li><a href="/php/galeon/views/galeon.php" id="size-desktop">Galeon</a></li>
         </ul>
         <img src="/img/1663952285593 (3).png">
         <div id="box-maps">

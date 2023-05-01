@@ -7,5 +7,5 @@
     $res=sqlsrv_query($con,$sql);
     while($row=sqlsrv_fetch_array($res)){
     }
-    header('Location: cuentas.php');
+    header('Location: /php/galeon/views/cuentas.php');
 ?>

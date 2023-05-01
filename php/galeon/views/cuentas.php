@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuentas | Galeon</title>
     <link rel="icon" href="/img/1663952285593 (3).png" type="image/png" sizes="24x24">
-    <link rel="stylesheet" href="/style/productosGaleon.css">
-    <link rel="stylesheet" href="/style/cuentas.css">
+    <link rel="stylesheet" href="/style/galeon/productosGaleon.css">
+    <link rel="stylesheet" href="/style/galeon/cuentas.css">
+    <script src="/Javascript/keyEventCuentas.js"></script>
 </head>
 <body>
     <div>
         <ul id="menu">
-        <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/index-galeon.php">Inicio</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/html/index.html" id="title">Galeras</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/productosGaleon.php">Productos</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Eventos</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Comparativa</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Almacen</a></li>    
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/cuentas.php">Cuentas</a></li>   
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="">Historial</a></li>    
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/index-galeon.php">Inicio</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/html/galeras/index.html" id="title">Galeras</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/productosGaleon.php">Productos</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/eventosGaleon.php">Eventos</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/comparativaGaleon.php">Comparativa</a></li>
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/almacenGaleon.php">Almacen</a></li>    
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/cuentas.php">Cuentas</a></li>   
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/historial.php">Historial</a></li>    
         </ul>
     </div>
     <?php
@@ -49,7 +50,7 @@
         }
         echo <<<TEXTO
             <h1></h1>
-            <form action="/php/registroCuentas.php" method="post">
+            <form action="registroCuentas.php" method="post">
                 <button type="submit" id="createAccount">Crear</button>
             </form>
             <div id="buttom-cuenta">
@@ -71,6 +72,7 @@
             <td>Apellido paterno</td>
             <td>Apellido materno</td>
             <td>Usuario</td>
+            <td>Contraseña</td>
             <td>Tipo usuario</td>
             <td>Acciones</td>
         </tr>
@@ -81,7 +83,7 @@
                 $stmt = "209.126.107.8";
                 $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
-                $sql="SELECT id_cuenta, nombre_sesion, apellido_p_sesion, apellido_m_sesion, usuario_sesion, nombre_tipo_cuentas FROM dbo.cuentas INNER JOIN dbo.tipo_cuentas ON id_tipo_cuentas = fk_id_tipo_cuentas WHERE usuario_sesion LIKE '$user%' and activo_sesion = 1";
+                $sql="SELECT id_cuenta, nombre_sesion, apellido_p_sesion, apellido_m_sesion, usuario_sesion, contrasena_sesion, nombre_tipo_cuentas FROM dbo.cuentas INNER JOIN dbo.tipo_cuentas ON id_tipo_cuentas = fk_id_tipo_cuentas WHERE usuario_sesion LIKE '$user%' and activo_sesion = 1";
                 $res=sqlsrv_query($con,$sql);
                 while($row=sqlsrv_fetch_array($res)){
                     $id = $row['id_cuenta'];
@@ -89,6 +91,7 @@
                     $apellidoP = $row['apellido_p_sesion'];
                     $apellidoM = $row['apellido_m_sesion'];
                     $usuario = $row['usuario_sesion'];
+                    $password = $row['contrasena_sesion'];
                     $tipoUsuario = $row['nombre_tipo_cuentas'];
                     echo <<<TEXTO
                         <tr>
@@ -96,13 +99,14 @@
                             <td>$apellidoP</td>
                             <td>$apellidoM</td>
                             <td>$usuario</td>
+                            <td>$password</td>
                             <td>$tipoUsuario</td>
                             <td>
-                            <form action="/php/modificarCuentas.php" method="post">
+                            <form action="modificarCuentas.php" method="post">
                                 <input type="text" value="$id" name="id" style="display: none;">
                                 <button type="submit">Actualizar</button>
                             </form>
-                            <form action="/php/activacionCuentaDesactivar.php" method="post">
+                            <form action="/php/galeon/controllers/activacionCuentaDesactivar.php" method="post">
                                 <input type="text" value="$id" name="id" style="display: none;">
                                 <button type="submit" name="desactivar">Desactivar</button>
                             </form>
@@ -114,7 +118,7 @@
             $stmt = "209.126.107.8";
             $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
             $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
-            $sql="SELECT id_cuenta, nombre_sesion, apellido_p_sesion, apellido_m_sesion, usuario_sesion, nombre_tipo_cuentas FROM dbo.cuentas INNER JOIN dbo.tipo_cuentas ON id_tipo_cuentas = fk_id_tipo_cuentas WHERE activo_sesion = 1";
+            $sql="SELECT id_cuenta, nombre_sesion, apellido_p_sesion, apellido_m_sesion, usuario_sesion, contrasena_sesion, nombre_tipo_cuentas FROM dbo.cuentas INNER JOIN dbo.tipo_cuentas ON id_tipo_cuentas = fk_id_tipo_cuentas WHERE activo_sesion = 1";
             $res=sqlsrv_query($con,$sql);
             while($row=sqlsrv_fetch_array($res)){
                 $id = $row['id_cuenta'];
@@ -122,6 +126,7 @@
                 $apellidoP = $row['apellido_p_sesion'];
                 $apellidoM = $row['apellido_m_sesion'];
                 $usuario = $row['usuario_sesion'];
+                $password = $row['contrasena_sesion'];
                 $tipoUsuario = $row['nombre_tipo_cuentas'];
                 echo <<<TEXTO
                     <tr>
@@ -129,13 +134,14 @@
                     <td>$apellidoP</td>
                     <td>$apellidoM</td>
                     <td>$usuario</td>
+                    <td>$password</td>
                     <td>$tipoUsuario</td>
                     <td>
-                    <form action="/php/modificarCuentas.php" method="post">
+                    <form action="modificarCuentas.php" method="post">
                         <input type="text" value="$id" name="id" style="display: none;">
                         <button type="submit">Actualizar</button>
                         </form>
-                    <form action="/php/activacionCuentaDesactivar.php" method="post">
+                    <form action="/php/galeon/controllers/activacionCuentaDesactivar.php" method="post">
                         <input type="text" value="$id" name="id" style="display: none;">
                         <button type="submit" name="desactivar">Desactivar</button>
                     </form>
@@ -156,6 +162,7 @@
             <td>Apellido paterno</td>
             <td>Apellido materno</td>
             <td>Usuario</td>
+            <td>Contraseña</td>
             <td>Tipo usuario</td>
             <td>Acciones</td>
         </tr>
@@ -163,7 +170,7 @@
             $stmt = "209.126.107.8";
             $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
             $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
-            $sql="SELECT id_cuenta, nombre_sesion, apellido_p_sesion, apellido_m_sesion, usuario_sesion, nombre_tipo_cuentas FROM dbo.cuentas INNER JOIN dbo.tipo_cuentas ON id_tipo_cuentas = fk_id_tipo_cuentas WHERE activo_sesion = 0";
+            $sql="SELECT id_cuenta, nombre_sesion, apellido_p_sesion, apellido_m_sesion, usuario_sesion, contrasena_sesion, nombre_tipo_cuentas FROM dbo.cuentas INNER JOIN dbo.tipo_cuentas ON id_tipo_cuentas = fk_id_tipo_cuentas WHERE activo_sesion = 0";
             $res=sqlsrv_query($con,$sql);
             while($row=sqlsrv_fetch_array($res)){
                 $id = $row['id_cuenta'];
@@ -171,6 +178,7 @@
                 $apellidoP = $row['apellido_p_sesion'];
                 $apellidoM = $row['apellido_m_sesion'];
                 $usuario = $row['usuario_sesion'];
+                $password = $row['contrasena_sesion'];
                 $tipoUsuario = $row['nombre_tipo_cuentas'];
                 echo <<<TEXTO
                     <tr>
@@ -178,13 +186,14 @@
                         <td>$apellidoP</td>
                         <td>$apellidoM</td>
                         <td>$usuario</td>
+                        <td>$password</td>
                         <td>$tipoUsuario</td>
                         <td>
-                        <form action="/php/modificarCuentas.php" method="post">
+                        <form action="modificarCuentas.php" method="post">
                         <input type="text" value="$id" name="id" style="display: none;">
                         <button type="submit">Actualizar</button>
                         </form>
-                        <form action="/php/activacionCuentaActivar.php" method="post">
+                        <form action="/php/galeon/controllers/activacionCuentaActivar.php" method="post">
                             <input type="text" value="$id" name="id" style="display: none;">
                             <button type="submit">Activar</button>
                         </form>

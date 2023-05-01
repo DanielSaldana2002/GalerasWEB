@@ -1,4 +1,5 @@
 <?php
+    $validacion = 1;
     $stmt = "209.126.107.8";
     $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
     $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
@@ -23,20 +24,24 @@
     while($row=sqlsrv_fetch_array($res)){
         $auxUser = $row['usuario_sesion'];
         if($auxUser == $usuarioUser){
-            header('Location: errorCreacionCuenta.php');
+            $validacion = 0;
+            header('Location: /php/galeon/errors/errorCreacionCuenta.php');
         }
+        $auxUser = '';
     }
     if($tipoUser == 'Administrador'){
         $idTipoUser = 1;
     }else if($tipoUser == 'Estandar'){
         $idTipoUser = 2;
     }
-    $stmt = "209.126.107.8";
-    $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
-    $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
-    $sql="INSERT INTO dbo.cuentas(id_cuenta, nombre_sesion, apellido_p_sesion, apellido_m_sesion, usuario_sesion, contrasena_sesion, fk_id_tipo_cuentas, activo_sesion) VALUES ($id,'$nombreUser','$apellidoPUser','$apellidoMUser','$usuarioUser','$passwordUser',$idTipoUser, '1')";
-    $res=sqlsrv_query($con,$sql);
-    while($row=sqlsrv_fetch_array($res)){
+    if($validacion == 1){
+        $stmt = "209.126.107.8";
+        $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+        $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
+        $sql="INSERT INTO dbo.cuentas(id_cuenta, nombre_sesion, apellido_p_sesion, apellido_m_sesion, usuario_sesion, contrasena_sesion, fk_id_tipo_cuentas, activo_sesion) VALUES ($id,'$nombreUser','$apellidoPUser','$apellidoMUser','$usuarioUser','$passwordUser',$idTipoUser, '1')";
+        $res=sqlsrv_query($con,$sql);
+        while($row=sqlsrv_fetch_array($res)){
+        }
+        header('Location: /php/galeon/views/cuentas.php');
     }
-    header('Location: cuentas.php');
 ?>
