@@ -30,8 +30,9 @@
         <h1>Agregar eventos</h1>
         <form action="/php/galeon/controllers/verificacionEventos.php" method="post">
             <input type="text" name="titleEvento" id="" placeholder="Titulo">
-            <textarea name="descripcionEvento" id="" cols="22" rows="7" placeholder="Descripcion"></textarea>
+            <textarea name="descripcionEvento" id="" cols="23" rows="6" placeholder="Descripcion"></textarea>
             <br>
+            <input id="dateBox" type="date" name="dateCombo" min="<?php echo date('Y-m-d'); ?>" value="<?php echo date('Y-m-d'); ?>">
             <select name="cTipoEvento">
                 <?php
                     $stmt = "209.126.107.8";
@@ -46,7 +47,8 @@
                         TEXTO;
                     }
                 ?>
-            </select><button>Enviar</button>
+            </select>
+            <br><button>Enviar</button>
         </form>
     </div>
 </body>

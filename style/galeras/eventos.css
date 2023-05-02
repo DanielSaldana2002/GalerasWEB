@@ -1,0 +1,21 @@
+#title-evento{
+    font-size: 69px;
+    margin-left: 0.2em;
+}
+#title-evento1{
+    font-size: 69px;
+    margin-left: 0.2em;
+    margin-top: 1.5em;
+}
+#boxEvento{
+    box-shadow: 1px 1px 16px grey;
+    margin-left: 0.5em;
+    margin-right: 10em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+    font-size: 30px;
+}
+img{
+    left: 98%;
+}

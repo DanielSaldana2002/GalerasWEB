@@ -19,5 +19,5 @@
     while($row=sqlsrv_fetch_array($res)){
         
     }
-    header("Location: comentarios.php");
+    header("Location: /php/galeras/views/comentarios.php");
 ?>

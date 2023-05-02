@@ -38,10 +38,9 @@
             echo "<h3>$categoria de $producto</h3>";
         ?>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus deserunt ab qui dolores quae laborum voluptate veritatis voluptatum? Fuga, corporis iusto hic atque aut obcaecati consequatur suscipit veniam neque.</p>
-
     </div>
     <div id='box-image-left'>
-            <img src="https://cdn-icons-png.flaticon.com/512/31/31930.png">
+        <img src="https://cdn-icons-png.flaticon.com/512/31/31930.png">
     </div>
     <div id='box-bebidas-mas-vendidos'>
         <h1>Bebida mas vendida</h1>
@@ -58,6 +57,33 @@
             echo "<h3>$categoria $producto</h3>";
         ?>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus deserunt ab qui dolores quae laborum voluptate veritatis voluptatum? Fuga, corporis iusto hic atque aut obcaecati consequatur suscipit veniam neque.</p>
-    </div>
+        <div id='box-Pescados-Zarandeados'>
+            <div id="contentProducto">
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MENU</h1>
+            <?php
+                $stmt = "209.126.107.8";
+                $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120");   
+                $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
+                $sql="SELECT nombre_categoria FROM dbo.categoria_productos";
+                $res=sqlsrv_query($con,$sql);
+                while($row=sqlsrv_fetch_array($res)){
+                    $aux = $row['nombre_categoria'];
+                    echo <<<TEXTO
+                            <div id="contentProducto">
+                                <h3>Categoria-$aux</h3>
+                                <ul>
+                                    <li>Huachinango&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$200</li>
+                                    <li>Camaron&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$179</li>
+                                    <li>Filete&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$159</li>
+                                    <li>Pulpo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$159</li>
+                                </ul>
+                            </div>  <p>Preparacion:  Cebolla, Pimentos, Adobo, Zal de ajo.</p>
+                    TEXTO;
+                }
+            ?>
+                <img src="https://tipsparatuviaje.com/wp-content/uploads/2020/02/pescado-zarandeado.jpg"width="390" height="340"/>  
+            </div>
+        </div>
+        </div>
 </body>
 </html>

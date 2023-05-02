@@ -21,7 +21,7 @@
         </ul>
         <img src="/img/1663952285593 (3).png">
         <div id="formComentarios">
-            <form action="/php/comentarioVerificacion.php" method="post">
+            <form action="/php/galeras/controllers/comentarioVerificacion.php" method="post">
                 <p>Escribe tu comentario:</p>
                 <textarea name="comentarioGaleras" id="comentarioInput" cols="80" rows="10"></textarea>
                 <p>Puntuacion: <select name="cPuntacion" id="puntacion">
