@@ -1,59 +1,100 @@
 body{
+
+    position: absolute;
     table-layout: auto;
-    overflow-x: hidden;
 }
-#box{
-    position: absolute;
-    margin-top: 3.5em;
-}
-#box h1{
-    font-size: 40px;
-}
-#boxCategorias{
-    position: absolute;
-    margin-left: 1em;
-    padding-right: 21em;
-    padding-left: 1em;
-    /*background-color: red;*/
-}
-#boxCategorias input{
-font-size: 30px;
-    margin-left: 1em;
-}
-#boxCategorias h3{
-    font-size: 30px;
-}
-#boxCategorias button{
-    margin-left: 1em;
-    font-size: 30px;
-}
-#boxTableCategorias{
-    height: 250px;
-    overflow-y: scroll;
+a{
+    text-decoration: none;
+    color: black;
 }
 table{
     transition: 300ms;
-    margin-top: 0.5em;
-    border-collapse: collapse ;
-    margin-left: 13em;
+    margin-top: 1.5em;
+    border-collapse: collapse;
+    margin-left: 1.5em;
     
+}
+
+tr,td{
+    padding-top: 8px;
+    padding-left: 2.5em;
+    padding-right: 2em;
+    font-size: 17.4px;
+    margin-left: initial;
+}
+th{
+    text-align: left;
+}
+tr:hover{
+    background-color: rgb(172, 172, 172);
 }
 #title-table td{
     background-color: rgb(167, 167, 167);
 }
-#cuerpoTable{
-    background-color: white;
-}
-tr,td{
-
-    padding-top: 3px;
-    padding-left: 6.5em;
-    padding-right: 8em;
-    font-size: 23.4px;
-    margin-left: initial;
-    border: 1px black solid;
+#buttom-cuenta{
     margin-top: 4em;
+    
 }
-th{
-    text-align: left;
+#buttom-cuenta h2{
+    margin-left: 1em;
+    font-size: 25px;
+}
+#cuentaTotal{
+    margin-left: 40em;
+    padding-top: 1em;
+}
+#buttom-cuenta button{
+    position: absolute;
+    margin-top: 0em;
+    margin-left: 19em;
+    font-size: 17px;
+}
+#createC{
+    position: absolute;
+    margin-left: 23em;
+    margin-top: 2.8em;
+    font-size: 17px;
+}#createP{
+    position: absolute;
+    margin-left: 30em;
+    margin-top: 2.8em;
+    font-size: 17px;
+}
+#buttom-cuenta input{
+    margin-left: 4em;
+    position: absolute;
+    margin-top: 1.3em;
+    margin-right: 2em;
+    font-size: 17px;
+    padding-right: 2em;
+}
+#cuentaAdmi{
+    margin-left: 23em;
+    position: absolute;
+}
+#tableContadorP{
+    position: absolute;
+    margin-left: 46em;
+    margin-top: -1.2em;
+}
+#titleTable td{
+    background-color: rgb(167, 167, 167);
+}
+#titleTable tr:hover{
+    background-color: rgb(172, 172, 172);
+}
+#tableCategoria{
+    position: absolute;
+    margin-left: 45em;
+    margin-top: 18em;
+}
+#titleTableC td{
+    background-color: rgb(167, 167, 167);
+}#titleTableC tr:hover{
+    background-color: rgb(172, 172, 172);
+}
+#tableProducto{
+    position: absolute;
+    margin-left: 66em;
+    margin-top: 18em;
 }
