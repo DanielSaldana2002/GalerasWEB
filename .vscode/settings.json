@@ -1,4 +1,11 @@
 {
     "liveServer.settings.port": 5501,
-    "sqltools.connections": []
+    "sqltools.connections": [],
+    "editor.emptySelectionClipboard": true,
+    "editor.selectionHighlight": true,
+    "markdown.preview.markEditorSelection": true,
+    "markdown.editor.drop.enabled": true,
+    "mergeEditor.showDeletionMarkers": true,
+    "editor.columnSelection": false,
+    "code-runner.ignoreSelection": false
 }

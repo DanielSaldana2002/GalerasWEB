@@ -1,5 +1,7 @@
 body{
     background-color: rgb(33, 145, 145);
+    table-layout: auto;
+    overflow: hidden;
 }
 #dateBox{
     padding-right: 0em;
@@ -9,7 +11,7 @@ body{
     padding-left: 10em;
     padding-right: 10em;
     padding-bottom: -1em;   
-    margin-left: 21em;
+    margin-left: 0em;
 }
 #boxForm input{
     transition: 300ms;
@@ -50,12 +52,95 @@ body{
     transition: 300ms;
     box-shadow: 1px 1px 10px rgb(13, 47, 70);
 }
+#boxForm2{
+    position: absolute;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-bottom: -1em;   
+    margin-left: 33em;
+}
+#boxForm2 input{
+    transition: 300ms;
+    font-size: 29px;
+    margin-top: 0.4em;
+    padding-right: 0.8em;
+}
+#boxForm2 textarea{
+    transition: 300ms;
+    font-size: 29px;
+    margin-top: 0.4em;
+}
+#boxForm2 select{
+    transition: 300ms;
+    font-size: 31px;
+    margin-top: 0.9em;
+    margin-left: 0em;
+}
+#boxForm2 h1{
+    color: rgb(73, 216, 156);
+    font-size: 40px;
+    padding-top: 1em;
+    padding-left: 1em;
+    margin-left: 5em;
+}
+#boxForm2 button{
+    margin-top: 0.9em;
+    margin-bottom: 0.8em;
+    font-size: 30px;
+    margin-left: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#boxForm2 input:hover{
+    transition: 300ms;
+    box-shadow: 1px 1px 10px rgb(13, 47, 70);
+}
+#boxForm2 select:hover{
+    transition: 300ms;
+    box-shadow: 1px 1px 10px rgb(13, 47, 70);
+}
 #shadowForm{
     background: linear-gradient(to bottom, rgb(33, 145, 145), rgb(206, 204, 204));
     position: absolute;
     padding-left: 40em;
-    margin-left: 22.5em;
+    margin-left: 1.5em;
     margin-top: 4em;
     padding-top: 31em;
     box-shadow: 1px 1px 10px rgb(99, 97, 97);
+    border-radius: 1em;
+}
+#shadowForm2{
+    background: linear-gradient(to bottom, rgb(33, 145, 145), rgb(206, 204, 204));
+    position: absolute;
+    padding-left: 40em;
+    margin-left: 43.5em;
+    margin-top: 4em;
+    padding-top: 31em;
+    box-shadow: 1px 1px 10px rgb(99, 97, 97);
+    border-radius: 1em;
+}
+table{
+    transition: 300ms;
+    margin-top: 0.5em;
+    border-collapse: collapse ;
+    margin-left: 1.5em;
+    
+}
+#title-table td{
+    background-color: rgb(167, 167, 167);
+}
+#cuerpoTable{
+    background-color: white;
+}
+tr,td{
+
+    padding-top: 3px;
+    padding-left: 1.5em;
+    padding-right: 3.5em;
+    font-size: 17.4px;
+    margin-left: initial;
+    border: 1px black solid;
+}
+th{
+    text-align: left;
 }

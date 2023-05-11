@@ -25,12 +25,16 @@
     <div id="shadowForm">
         <h1></h1>
     </div>
+    <div id="shadowForm2">
+        <h1></h1>
+    </div>
     <div id="boxForm">
         <br>
         <h1>Agregar eventos</h1>
         <form action="/php/galeon/controllers/verificacionEventos.php" method="post">
             <input type="text" name="titleEvento" id="" placeholder="Titulo">
-            <textarea name="descripcionEvento" id="" cols="23" rows="6" placeholder="Descripcion"></textarea>
+            <br>
+            <textarea name="descripcionEvento" id="" cols="23" rows="5" placeholder="Descripcion"></textarea>
             <br>
             <input id="dateBox" type="date" name="dateCombo" min="<?php echo date('Y-m-d'); ?>" value="<?php echo date('Y-m-d'); ?>">
             <select name="cTipoEvento">
@@ -50,6 +54,41 @@
             </select>
             <br><button>Enviar</button>
         </form>
+    </div>
+    <div id="boxForm2">
+        <br><h1>Eventos</h1>
+        <div style="height: 400px; overflow-y: scroll;">
+            <table >
+                <tr id="title-table">
+                    <td>Nombre</td>
+                    <td>Fecha</td>
+                    <td>Creado</td>
+                    <td>Tipo</td>
+                </tr> 
+                <?php
+                    $stmt = "209.126.107.8";
+                    $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+                    $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
+                    $sql="SELECT nombre_evento, fecha_evento, usuario_sesion, nombre_tipo_evento FROM dbo.eventos INNER JOIN dbo.tipo_evento ON id_tipo_evento = fk_id_tipo_evento INNER JOIN dbo.cuentas ON id_cuenta = fk_id_cuentas_e ORDER BY fecha_evento ASC";
+                    $res=sqlsrv_query($con,$sql);
+                    while($row=sqlsrv_fetch_array($res)){
+                        $nombre = $row['nombre_evento'];
+                        $fecha = $row['fecha_evento'];
+                        $fecha = $fecha->format('Y-m-d  ');
+                        $usuario = $row['usuario_sesion'];
+                        $tipoE = $row['nombre_tipo_evento'];
+                        echo <<<TEXTO
+                            <tr id="cuerpoTable">
+                                <td>$nombre</td>
+                                <td>$fecha</td>
+                                <td>$usuario</td>
+                                <td>$tipoE</td>
+                            </tr> 
+                        TEXTO;
+                    }
+                ?>   
+            </table>
+        </div>
     </div>
 </body>
 </html>

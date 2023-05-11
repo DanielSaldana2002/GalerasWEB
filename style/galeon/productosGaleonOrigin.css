@@ -1,0 +1,59 @@
+body{
+    table-layout: auto;
+    overflow-x: hidden;
+}
+#box{
+    position: absolute;
+    margin-top: 3.5em;
+}
+#box h1{
+    font-size: 40px;
+}
+#boxCategorias{
+    position: absolute;
+    margin-left: 1em;
+    padding-right: 21em;
+    padding-left: 1em;
+    /*background-color: red;*/
+}
+#boxCategorias input{
+font-size: 30px;
+    margin-left: 1em;
+}
+#boxCategorias h3{
+    font-size: 30px;
+}
+#boxCategorias button{
+    margin-left: 1em;
+    font-size: 30px;
+}
+#boxTableCategorias{
+    height: 250px;
+    overflow-y: scroll;
+}
+table{
+    transition: 300ms;
+    margin-top: 0.5em;
+    border-collapse: collapse ;
+    margin-left: 13em;
+    
+}
+#title-table td{
+    background-color: rgb(167, 167, 167);
+}
+#cuerpoTable{
+    background-color: white;
+}
+tr,td{
+
+    padding-top: 3px;
+    padding-left: 6.5em;
+    padding-right: 8em;
+    font-size: 23.4px;
+    margin-left: initial;
+    border: 1px black solid;
+    margin-top: 4em;
+}
+th{
+    text-align: left;
+}

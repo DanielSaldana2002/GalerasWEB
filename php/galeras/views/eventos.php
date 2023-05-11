@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comentarios | Galeras</title>
+    <title>Eventos | Galeras</title>
     <link rel="icon" href="/img/1663952285593 (3).png" type="image/png" sizes="24x24">
     <link rel="stylesheet" href="/style/galeras/style.css">
     <link rel="stylesheet" href="/style/galeras/eventos.css">
@@ -27,7 +27,7 @@
             $stmt = "209.126.107.8";
             $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120");   
             $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
-            $sql="SELECT nombre_evento, descripcion_evento, fecha_evento, fk_id_tipo_evento FROM dbo.eventos WHERE fk_id_tipo_evento = 2";
+            $sql="SELECT nombre_evento, descripcion_evento, fecha_evento, fk_id_tipo_evento FROM dbo.eventos WHERE fk_id_tipo_evento = 2 ORDER BY fecha_evento ASC";
             $res=sqlsrv_query($con,$sql);
             while($row=sqlsrv_fetch_array($res)){
                 $nombreC = $row['nombre_evento'];
@@ -48,7 +48,7 @@
             $stmt = "209.126.107.8";
             $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120");   
             $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
-            $sql="SELECT nombre_evento, descripcion_evento, fecha_evento, fk_id_tipo_evento FROM dbo.eventos WHERE fk_id_tipo_evento = 1";
+            $sql="SELECT nombre_evento, descripcion_evento, fecha_evento, fk_id_tipo_evento FROM dbo.eventos WHERE fk_id_tipo_evento = 1 ORDER BY fecha_evento ASC";
             $res=sqlsrv_query($con,$sql);
             while($row=sqlsrv_fetch_array($res)){
                 $nombre = $row['nombre_evento'];
