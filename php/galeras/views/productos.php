@@ -64,21 +64,39 @@
                 $stmt = "209.126.107.8";
                 $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120");   
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
+                $sql="SELECT count(*) total FROM dbo.categoria_productos";
+                $res=sqlsrv_query($con,$sql);
+                while($row=sqlsrv_fetch_array($res)){
+                    $total = $row['total'];
+                }
+                $i=1;
+                $stmt = "209.126.107.8";
+                $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120");   
+                $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT nombre_categoria FROM dbo.categoria_productos";
                 $res=sqlsrv_query($con,$sql);
                 while($row=sqlsrv_fetch_array($res)){
-                    $aux = $row['nombre_categoria'];
+                    $auxNombre = $row['nombre_categoria'];
                     echo <<<TEXTO
-                            <div id="contentProducto">
-                                <h3>Categoria-$aux</h3>
-                                <ul>
-                                    <li>Huachinango&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$200</li>
-                                    <li>Camaron&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$179</li>
-                                    <li>Filete&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$159</li>
-                                    <li>Pulpo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$159</li>
-                                </ul>
-                            </div>  <p>Preparacion:  Cebolla, Pimentos, Adobo, Zal de ajo.</p>
-                    TEXTO;
+                        <h3>Categoria-$auxNombre</h3>
+                        <ul>
+                    TEXTO; 
+                    $stmt2 = "209.126.107.8";
+                    $opc2=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120");   
+                    $con2=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
+                    $sql2="SELECT nombre_producto,precio FROM dbo.categoria_productos INNER JOIN dbo.productos ON id_categoria = fk_id_categoria WHERE id_categoria = $i";
+                    $res2=sqlsrv_query($con,$sql2);
+                    while($row2=sqlsrv_fetch_array($res2)){
+                        $auxProductos = $row2['nombre_producto'];
+                        $auxPrecio = $row2['precio'];
+                        echo <<<TEXTO
+                            <li>$auxProductos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$auxPrecio</li>
+                        TEXTO;
+                    }
+                    echo "</ul>";
+                    if($total > $i){
+                        $i++;
+                    }
                 }
             ?>
                 <img src="https://tipsparatuviaje.com/wp-content/uploads/2020/02/pescado-zarandeado.jpg"width="390" height="340"/>  

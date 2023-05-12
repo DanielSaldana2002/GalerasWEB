@@ -8,8 +8,10 @@
     $sql="SELECT nombre_categoria from dbo.categoria_productos";
     $res=sqlsrv_query($con,$sql);
     while($row=sqlsrv_fetch_array($res)){
-        $aux = $row['nombre_categoria'] ;
-        if($aux == $nombre){
+        $aux = $row['nombre_categoria'];
+        $auxA = strtolower($row['nombre_categoria']);
+        $auxNombre = strtolower($nombre);
+        if($auxA == $auxnombre || $aux == $nombre || $auxA == $nombre){
             $val = true;
         }
     }

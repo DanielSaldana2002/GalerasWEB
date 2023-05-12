@@ -20,7 +20,7 @@
     <div id='size-imagen'>
         <div id='title-message-box'>
             <h1>ERROR REGISTRO DE PRODUCTOS</h1>
-            <p>El producto que intentas registrar ya existe.</p>
+            <p>El producto que intentas registrar ya existe en este categoria.</p>
             <button><a href="/php/galeon/views/registroCategorias.php">Regresar a Registro</a></button>
         </div>
         <img src="/img/1663952285593 (3).png" alt="Logo galeras" id="logo-galeras">
