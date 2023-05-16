@@ -1,0 +1,51 @@
+body{
+    overflow: scroll;
+}
+#boxPresentacionAlmacen{
+    padding-right: 0em;
+    margin-left: 19em;
+}
+
+#boxPresentacionAlmacen h2{
+    font-size: 160px;
+    text-shadow: 1px 1px 5px rgb(46, 40, 7);
+    padding-top: 0em;
+    margin-left: -1.3em;
+}
+a{
+    text-decoration-line: none;
+    color: black;
+}   
+h1{
+    font-size: 60px;
+    margin-left: 0.5em;
+}
+table{
+    transition: 300ms;
+    margin-top: 1.5em;
+    border-collapse: collapse;
+    margin-left: 1.5em;
+    
+}
+tr,td{
+    padding-top: 8px;
+    padding-left: 2.5em;
+    padding-right: 1.5em;
+    font-size: 21.2px;
+    margin-left: initial;
+}
+th{
+    text-align: left;
+}
+tr:hover{
+    background-color: rgb(172, 172, 172);
+}
+#titleTable td{
+    background-color: rgb(167, 167, 167);
+}
+#busquedaI input{
+    margin-left: 1.2em;
+    font-size: 21.2px;
+}#busquedaI button{
+    font-size: 21.2px;
+}

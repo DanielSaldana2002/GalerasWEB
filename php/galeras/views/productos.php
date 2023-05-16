@@ -78,7 +78,7 @@
                 while($row=sqlsrv_fetch_array($res)){
                     $auxNombre = $row['nombre_categoria'];
                     echo <<<TEXTO
-                        <h3>Categoria-$auxNombre</h3>
+                        <h3>$auxNombre</h3>
                         <ul>
                     TEXTO; 
                     $stmt2 = "209.126.107.8";

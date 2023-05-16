@@ -23,7 +23,7 @@
         <div id="formComentarios">
             <form action="/php/galeras/controllers/comentarioVerificacion.php" method="post">
                 <p>Escribe tu comentario:</p>
-                <textarea name="comentarioGaleras" id="comentarioInput" cols="80" rows="10"></textarea>
+                <textarea name="comentarioGaleras" id="comentarioInput" cols="80" rows="10" required></textarea>
                 <p>Puntuacion: <select name="cPuntacion" id="puntacion">
                     <option>1⭐</option>
                     <option>2⭐</option>

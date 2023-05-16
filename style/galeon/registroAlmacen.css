@@ -1,0 +1,57 @@
+body{
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 10;
+    top: 15px;
+    position: absolute;
+    animation: fondo-inicial linear 1s;
+    background-color: rgb(29, 138, 138);
+}
+@keyframes fondo-inicial {
+    0%{opacity: 0%;}
+    50%{opacity: 10;}
+}
+#boxRegistro{
+    margin-top: 2em;
+    background: linear-gradient(to bottom, rgb(33, 145, 145), rgb(196, 196, 196));
+    padding-left: 15em;
+    padding-right: 2em;
+    padding-bottom: 5em;
+    padding-top: 1em;   
+    margin-left: 0em;
+}
+#boxRegistro input{
+    transition: 300ms;
+    font-size: 35px;
+    margin-top: 1em;
+    margin-left: 0.5em;
+}
+#boxRegistro select{
+    transition: 300ms;
+    font-size: 35px;
+    margin-top: 1em;
+    margin-left: 0.5em;
+}
+#boxRegistro h1{
+    color: rgb(73, 216, 156);
+    font-size: 60px;
+    padding-top: -2em;
+}
+#boxRegistro button{
+    margin-top: 1.5em;
+    font-size: 40px;
+    margin-left: 8.8em;
+}
+#boxRegistro input:hover{
+    transition: 300ms;
+    box-shadow: 1px 1px 10px rgb(13, 47, 70);
+}
+#boxRegistro select:hover{
+    transition: 300ms;
+    box-shadow: 1px 1px 10px rgb(13, 47, 70);
+}
+#precioP{
+    font-size: 10px;
+}
