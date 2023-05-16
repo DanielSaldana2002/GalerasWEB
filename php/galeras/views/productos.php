@@ -100,6 +100,8 @@
                 }
             ?>
                 <img src="https://tipsparatuviaje.com/wp-content/uploads/2020/02/pescado-zarandeado.jpg"width="390" height="340"/>  
+                <img src="/img/20230512_155827.jpg"width="390" height="340" style="margin-top: 23em;"/> 
+                <img src="/img/20230512_155750.jpg"width="390" height="340" style="margin-top: 46em;"/> 
             </div>
         </div>
         </div>

@@ -22,3 +22,7 @@
     color: rgb(18, 104, 116);
     text-shadow: 3px 2px 8px rgb(45, 136, 148);
 }
+#contenido{
+    position: absolute;
+    margin-top: 10em;
+}

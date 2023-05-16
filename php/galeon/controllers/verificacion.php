@@ -19,7 +19,7 @@
     $nombre = strtr($nombre,"ñ", "n");
     $apellidoP = strtr($apellidoP, "ñ", "n");
     if($usuario == $userBD && $password == $passwordBD){    
-        if($tipoCuentaBD == 'Administrador'){
+        if($tipoCuentaBD == 'Administrador' && $status == 1){
             $_SESSION['usuario'] = $userBD;
             $_SESSION['nombreApellidoUsuario'] = "$nombre $apellidoP";
             header("Location: /php/galeon/views/index-galeon.php");   

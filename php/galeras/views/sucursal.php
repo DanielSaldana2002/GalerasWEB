@@ -37,5 +37,8 @@
             <p id="description-movil">La version movil/tablet estara proximamente</p>
         </div>
     </div>
+    <div id="contenido">
+            <img src="/img/20230512_151535.jpg" width="50%">
+        </div>
 </body>
 </html>
