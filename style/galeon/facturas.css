@@ -9,30 +9,41 @@ h3{
     font-size: 30px;
     margin-left: 1.5em;
 }
+label{
+    font-size: 28px;
+    margin-left: 1.2em;
+}
 input{
     font-size: 25px;
     margin-left: 1.5em;
+    border-radius: 5em 5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 select{
     font-size: 25px;
     margin-left: 1em;
-    padding-right: 2em;
+    padding-left: 0.5em;
+    padding-right: 1.5em;
+    border-radius: 5em 5em;
 }
 button{
     font-size: 25px;
     margin-left: 1.5em;
+    border-radius: 5em 5em;
+    padding-left: 0.5em;
+    padding-right:0.5em;
 }
 table{
     transition: 300ms;
     margin-top: 1.5em;
     border-collapse: collapse;
     margin-left: 2.5em;
-    
 }
 tr,td{
     padding-top: 8px;
-    padding-left: 2.5em;
-    padding-right: 1.5em;
+    padding-left: 1.5em;
+    padding-right: 1.1em;
     font-size: 21.2px;
     margin-left: initial;
 }
@@ -40,7 +51,7 @@ th{
     text-align: left;
 }
 tr:hover{
-    background-color: rgb(172, 172, 172);
+    background-color: rgb(172 , 172, 172);
 }
 #titleTable td{
     background-color: rgb(167, 167, 167);

@@ -21,8 +21,8 @@
         <h1>AGREGAR TICKET:</h1>
         <form action="/php/object/verificacionTicket.php" method="post">
             <?php
-                $stmt = "209.126.107.8";
-                $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+                $stmt = "localhost";
+                $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole");
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT COUNT(id_tickets) id FROM dbo.tickets;";
                 $res=sqlsrv_query($con,$sql);
@@ -35,8 +35,8 @@
             ?>
             <select name="cEmpleado">
                 <?php
-                    $stmt = "DESKTOP-DANIEL";
-                    $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+                    $stmt = "localhost";
+                    $$opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                     $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                     $sql="SELECT nombre_empleado FROM dbo.empleados;";
                     $res=sqlsrv_query($con,$sql);
@@ -49,8 +49,8 @@
             </select>
             <select name="cCuenta">
                 <?php
-                    $stmt = "DESKTOP-DANIEL";
-                    $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+                    $stmt = "localhost";
+                    $$opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                     $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                     $sql="SELECT usuario_sesion FROM dbo.cuentas;";
                     $res=sqlsrv_query($con,$sql);
@@ -63,8 +63,8 @@
             </select>
             <select name="idMesas" id="">
             <?php
-                $stmt = "DESKTOP-DANIEL";
-                $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+                $stmt = "localhost";
+                $$opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT id_mesas FROM dbo.mesas;";
                 $res=sqlsrv_query($con,$sql);
@@ -83,8 +83,8 @@
     <form action="/php/object/verificacionPedidos.php" method="post">
         <select name="fkId" id="">
             <?php
-                $stmt = "DESKTOP-DANIEL";
-                $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+                $stmt = "localhost";
+                $$opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT id_tickets FROM dbo.tickets;";
                 $res=sqlsrv_query($con,$sql);
@@ -95,8 +95,8 @@
         </select>
         <select name="NombreProductos" id="fk_productos_Name" onclick="mostrarPrecio()">
             <?php
-                $stmt = "DESKTOP-DANIEL";
-                $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+                $stmt = "localhost";
+                $$opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT nombre_producto FROM dbo.productos;";
                 $res=sqlsrv_query($con,$sql);
@@ -111,8 +111,8 @@
         </select>
         <select name="fkMesas" id="">
             <?php
-                $stmt = "DESKTOP-DANIEL";
-                $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+                $stmt = "localhost";
+                $$opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT id_mesas FROM dbo.mesas;";
                 $res=sqlsrv_query($con,$sql);
@@ -123,8 +123,8 @@
         </select>
         <select name="fkPrecio" id="">
             <?php
-                $stmt = "DESKTOP-DANIEL";
-                $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+                $stmt = "localhost";
+                $$opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT precio FROM dbo.productos;";
                 $res=sqlsrv_query($con,$sql);
@@ -143,8 +143,8 @@
         <form action="/php/object/verificacionFactura.php" method="post">
             <select name="idTicketF">
                 <?php
-                    $stmt = "DESKTOP-DANIEL";
-                    $opc=array("Database"=>"galeras", "UID"=>"daniel2002","PWD"=>"12345678");  
+                    $stmt = "localhost";
+                    $$opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                     $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                     $sql="SELECT id_tickets FROM dbo.tickets;";
                     $res=sqlsrv_query($con,$sql);

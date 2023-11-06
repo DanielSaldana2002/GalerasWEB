@@ -499,17 +499,7 @@ a{
         50%{transform: skewy(10deg);}
     }
     
-    #ola-7{
-        position: absolute;
-        margin-top: 36em;
-        margin-left: 53em;
-        animation: move-ola-7 infinite 3s;
-    }
-    
-    @keyframes move-ola-7 {
-        0%{transform: skewX(0deg);}
-        50%{transform: skewy(-10deg);}
-    }
+W
     
     #ola-8{
         position: absolute;

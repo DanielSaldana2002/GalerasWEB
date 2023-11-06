@@ -24,16 +24,16 @@
         </ul>
     </div>
     <?php
-        $stmt = "209.126.107.8";
-        $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+        $stmt = "localhost";
+        $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
         $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
         $sql="SELECT count(id_productos) totalP FROM dbo.productos";
         $res=sqlsrv_query($con,$sql);
         while($row=sqlsrv_fetch_array($res)){
             $idCuentaInicial = $row['totalP'];
         }
-        $stmt = "209.126.107.8";
-        $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+        $stmt = "localhost";
+        $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
         $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
         $sql="SELECT count(id_categoria) totalC FROM dbo.categoria_productos";
         $res=sqlsrv_query($con,$sql);
@@ -58,8 +58,8 @@
                 <td>Productos</td>
             </tr>
             <?php
-                $stmt = "209.126.107.8";
-                $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+                $stmt = "localhost";
+                $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT nombre_producto FROM dbo.productos";
                 $res=sqlsrv_query($con,$sql);
@@ -80,8 +80,8 @@
                 <td>Categoria</td>
             </tr>
             <?php
-                $stmt = "209.126.107.8";
-                $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+                $stmt = "localhost";
+                $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT nombre_categoria FROM dbo.categoria_productos";
                 $res=sqlsrv_query($con,$sql);
@@ -103,8 +103,8 @@
                 <td>Total de productos</td>
             </tr>
             <?php
-                $stmt = "209.126.107.8";
-                $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+                $stmt = "localhost";
+                $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT nombre_categoria, count(*) total FROM dbo.categoria_productos INNER JOIN dbo.productos ON id_categoria = fk_id_categoria GROUP BY nombre_categoria";
                 $res=sqlsrv_query($con,$sql);
@@ -129,8 +129,8 @@
         </tr>
         
     <?php
-        $stmt = "209.126.107.8";
-        $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+        $stmt = "localhost";
+        $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
         $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
         $sql="SELECT nombre_categoria, nombre_producto, precio FROM dbo.categoria_productos INNER JOIN dbo.productos ON id_categoria = fk_id_categoria";
         $res=sqlsrv_query($con,$sql);

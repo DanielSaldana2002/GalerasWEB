@@ -34,8 +34,8 @@
                 <button type="submit" id="sendComentario">Enviar</button>
             </form>
             <?php
-                $stmt = "209.126.107.8";
-                $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120");   
+                $stmt = "localhost";
+                $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole");   
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT * FROM dbo.comentario";
                 $res=sqlsrv_query($con,$sql);
@@ -54,5 +54,8 @@
             ?>
         </div>
     </div>
+    <footer>
+        <p>© 2023 Nombre de la empresa. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

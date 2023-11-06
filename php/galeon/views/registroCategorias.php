@@ -32,8 +32,8 @@
             </br><input type="number" name="PrecioP" placeholder="Precio del producto" autocomplete="off" id="precioP" min="0" onkeydown="bloquearBotones()" required>
             </br><select name="cCategoria" id="">
                 <?php
-                    $stmt = "209.126.107.8";
-                    $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+                    $stmt = "localhost";
+                    $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                     $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                     $sql="SELECT nombre_categoria from dbo.categoria_productos";
                     $res=sqlsrv_query($con,$sql);

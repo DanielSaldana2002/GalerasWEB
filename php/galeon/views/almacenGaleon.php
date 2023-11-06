@@ -17,12 +17,24 @@
         <ul id="menu">
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/index-galeon.php">Inicio</a></li>
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/html/galeras/index.html" id="title">Galeras</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/productosGaleon.php">Productos</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/eventosGaleon.php">Eventos</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/comparativaGaleon.php">Comparativa</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/almacenGaleon.php">Almacen</a></li>    
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/eventosGaleon.php">Eventos</a></li> 
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/cuentas.php">Cuentas</a></li>   
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/historial.php">Historial</a></li>      
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Ventas</a>
+                <div class="dropdown-content">
+                    <a href="/php/galeon/views/productosGaleon.php">Cortes</a>
+                    <a href="/php/galeon/views/almacenGaleon.php">Historial</a>
+                    <a href="/php/galeon/views/facturaGaleon.php">Factura</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Productos</a>
+                <div class="dropdown-content">
+                    <a href="/php/galeon/views/productosGaleon.php">Producto</a>
+                    <a href="/php/galeon/views/almacenGaleon.php">Almacen</a>
+                </div>
+                </li>
+            </li>      
         </ul>
         <br>
         <h1>Almacen <button><a href="/php/galeon/views/registroAlmacen.php">Agregar</a></h1>
@@ -42,8 +54,8 @@
             <?php
                 if(isset($_POST['enviar'])){
                     $ingredientes = $_POST['buscarIngre'];
-                    $stmt = "209.126.107.8";
-                    $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+                    $stmt = "localhost";
+                    $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                     $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                     $sql="SELECT id_almacen, cantidad_piezas_almacen, contenido_piezas_total_almacen, nombre_tipo_pieza, usuario_sesion, nombre_almacen FROM dbo.almacen INNER JOIN dbo.almacen_tipo ON fk_id_tipo_piezas_almacen = id_tipo_piezas INNER JOIN dbo.cuentas ON id_cuenta = fk_id_cuentas_e_almacen WHERE nombre_almacen LIKE '%$ingredientes%'";
                     $res=sqlsrv_query($con,$sql);
@@ -79,8 +91,8 @@
                         TEXTO;
                     }
                 }else{
-                    $stmt = "209.126.107.8";
-                    $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+                    $stmt = "localhost";
+                    $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                     $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                     $sql="SELECT id_almacen, cantidad_piezas_almacen, contenido_piezas_total_almacen, nombre_tipo_pieza, usuario_sesion, nombre_almacen FROM dbo.almacen INNER JOIN dbo.almacen_tipo ON fk_id_tipo_piezas_almacen = id_tipo_piezas INNER JOIN dbo.cuentas ON id_cuenta = fk_id_cuentas_e_almacen";
                     $res=sqlsrv_query($con,$sql);
@@ -127,8 +139,8 @@
                 <td>Contenido de piezas</td>
             </tr>
             <?php
-                $stmt = "209.126.107.8";
-                $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+                $stmt = "localhost";
+                $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT nombre_almacen, cantidad_piezas_almacen, contenido_piezas_total_almacen, nombre_tipo_pieza FROM dbo.almacen INNER JOIN dbo.almacen_tipo ON fk_id_tipo_piezas_almacen = id_tipo_piezas ORDER BY cantidad_piezas_almacen DESC";
                 $res=sqlsrv_query($con,$sql);
@@ -155,8 +167,8 @@
                 <td>Contenido de piezas</td>
             </tr>
             <?php
-                $stmt = "209.126.107.8";
-                $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+                $stmt = "localhost";
+                $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                 $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                 $sql="SELECT nombre_almacen, cantidad_piezas_almacen, contenido_piezas_total_almacen, nombre_tipo_pieza FROM dbo.almacen INNER JOIN dbo.almacen_tipo ON fk_id_tipo_piezas_almacen = id_tipo_piezas ORDER BY cantidad_piezas_almacen ASC";
                 $res=sqlsrv_query($con,$sql);
@@ -176,5 +188,6 @@
             ?>
         </table><br>
     </div>
+
 </body>
 </html>

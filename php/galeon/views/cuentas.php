@@ -12,15 +12,27 @@
 </head>
 <body>
     <div>
-        <ul id="menu">
+    <ul id="menu">
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/index-galeon.php">Inicio</a></li>
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/html/galeras/index.html" id="title">Galeras</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/productosGaleon.php">Productos</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/eventosGaleon.php">Eventos</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/comparativaGaleon.php">Comparativa</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/almacenGaleon.php">Almacen</a></li>    
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/eventosGaleon.php">Eventos</a></li> 
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/cuentas.php">Cuentas</a></li>   
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/historial.php">Historial</a></li>    
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Ventas</a>
+                <div class="dropdown-content">
+                    <a href="/php/galeon/views/productosGaleon.php">Cortes</a>
+                    <a href="/php/galeon/views/almacenGaleon.php">Historial</a>
+                    <a href="/php/galeon/views/facturaGaleon.php">Factura</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Productos</a>
+                <div class="dropdown-content">
+                    <a href="/php/galeon/views/productosGaleon.php">Producto</a>
+                    <a href="/php/galeon/views/almacenGaleon.php">Almacen</a>
+                </div>
+                </li>
+            </li>      
         </ul>
     </div>
     <?php

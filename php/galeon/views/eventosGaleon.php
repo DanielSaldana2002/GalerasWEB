@@ -11,15 +11,27 @@
 </head>
 <body>
     <div>
-        <ul id="menu">
+    <ul id="menu">
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/index-galeon.php">Inicio</a></li>
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/html/galeras/index.html" id="title">Galeras</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/productosGaleon.php">Productos</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/eventosGaleon.php">Eventos</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/comparativaGaleon.php">Comparativa</a></li>
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/almacenGaleon.php">Almacen</a></li>    
+            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/eventosGaleon.php">Eventos</a></li> 
             <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/cuentas.php">Cuentas</a></li>   
-            <li onmouseenter="animationMargin()" onmouseout="animationMarginOff()"><a href="/php/galeon/views/historial.php">Historial</a></li>      
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Ventas</a>
+                <div class="dropdown-content">
+                    <a href="/php/galeon/views/productosGaleon.php">Cortes</a>
+                    <a href="/php/galeon/views/almacenGaleon.php">Historial</a>
+                    <a href="/php/galeon/views/facturaGaleon.php">Factura</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Productos</a>
+                <div class="dropdown-content">
+                    <a href="/php/galeon/views/productosGaleon.php">Producto</a>
+                    <a href="/php/galeon/views/almacenGaleon.php">Almacen</a>
+                </div>
+                </li>
+            </li>      
         </ul>
     </div>
     <div id="shadowForm">
@@ -39,8 +51,8 @@
             <input id="dateBox" type="date" name="dateCombo" min="<?php echo date('Y-m-d'); ?>" value="<?php echo date('Y-m-d'); ?>">
             <select name="cTipoEvento">
                 <?php
-                    $stmt = "209.126.107.8";
-                    $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+                    $stmt = "localhost";
+                    $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                     $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                     $sql="SELECT nombre_tipo_evento FROM dbo.tipo_evento";
                     $res=sqlsrv_query($con,$sql);
@@ -66,8 +78,8 @@
                     <td>Tipo</td>
                 </tr> 
                 <?php
-                    $stmt = "209.126.107.8";
-                    $opc=array("Database"=>"galerasw_galeras", "UID"=>"galerasw_galeras2023","PWD"=>"20021120"); 
+                    $stmt = "localhost";
+                    $opc=array("Database"=>"galerasw_galeras", "UID"=>"sole","PWD"=>"sole"); 
                     $con=sqlsrv_connect($stmt,$opc) or die(print_r(sqlsrv_errors(), true));
                     $sql="SELECT nombre_evento, fecha_evento, usuario_sesion, nombre_tipo_evento FROM dbo.eventos INNER JOIN dbo.tipo_evento ON id_tipo_evento = fk_id_tipo_evento INNER JOIN dbo.cuentas ON id_cuenta = fk_id_cuentas_e ORDER BY fecha_evento ASC";
                     $res=sqlsrv_query($con,$sql);
